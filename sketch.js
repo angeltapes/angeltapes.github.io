@@ -28,3 +28,8 @@ function draw() {
     env.play();
   }
 }
+
+function touchStarted(){
+  let display = touches.length + ' touches';
+  text(display, 5, 10);
+}
