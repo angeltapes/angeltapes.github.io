@@ -31,6 +31,7 @@ function draw() {
   if (mouseX > width/4 && mouseY < 3*width / 4 && mouseY > height/4 && mouseY < 3*height/4){
     env.play();
       clap.play();
+    fill(random(0,255),random(0,255),random(0,255));
   }
 }
 
