@@ -38,4 +38,5 @@ function draw() {
 function touchStarted(){
   let display = touches.length + ' touches';
   text(display, 5, 10);
+  clap.play();
 }
