@@ -1,5 +1,6 @@
-var osc1, osc2, osc3, env;
+var osc1, osc2, osc3, env, clap;
 function setup() {
+  clap = loadSound("clap.mp3");
     
   canvas=createCanvas(screen.availWidth*3.5,screen.availHeight*3);
   osc1 = new p5.Oscillator();
@@ -29,6 +30,7 @@ function draw() {
   rect(width/4,height/4,width/2,height/2);
   if (mouseX > width/4 && mouseY < 3*width / 4 && mouseY > height/4 && mouseY < 3*height/4){
     env.play();
+      clap.play();
   }
 }
 
