@@ -24,6 +24,8 @@ function setup() {
 }
 
 function draw() {
+  background(0);
+  fill(255);
   rect(width/4,height/4,width/2,height/2);
   if (mouseX > width/4 && mouseY < 3*width / 4 && mouseY > height/4 && mouseY < 3*height/4){
     env.play();
