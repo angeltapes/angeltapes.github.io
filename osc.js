@@ -2,6 +2,7 @@ var osc;
 var playing = false;
 
 function setup() {
+  canvas=createCanvas(screen.availWidth*3.5,screen.availHeight*3);
   backgroundColor = color(255,0,255);
   textAlign(CENTER);
 
