@@ -7,7 +7,7 @@ function setup() {
 
   osc = new p5.Oscillator();
   osc.setType('sine');
-  osc.freq(240);
+  osc.freq(1240);
   osc.amp(0);
   osc.start();
 }
