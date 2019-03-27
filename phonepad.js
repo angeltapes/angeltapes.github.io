@@ -30,7 +30,7 @@ function draw() {
   rect(width/4,height/4,width/2,height/2);
   if (mouseX > width/4 && mouseY < 3*width / 4 && mouseY > height/4 && mouseY < 3*height/4){
     env.play();
-      clap.play();
+
     fill(random(0,255),random(0,255),random(0,255));
   }
 }
@@ -38,5 +38,5 @@ function draw() {
 function touchStarted(){
   let display = touches.length + ' touches';
   text(display, 5, 10);
-  clap.play();
+  osc1.freq(mouseY);
 }
