@@ -19,6 +19,9 @@ function draw() {
 }
 
 function touchStarted() {
+  if (getAudioContext().state!=='running' {
+      getAudioContext().resume();
+      }
   if (mouseX > 0 && mouseX < width && mouseY < height && mouseY > 0) {
     if (!playing) {
       // ramp amplitude to 0.5 over 0.05 seconds
