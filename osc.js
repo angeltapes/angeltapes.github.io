@@ -19,7 +19,7 @@ function draw() {
 }
 
 function touchStarted() {
-  if (getAudioContext().state!=='running' {
+  if (getAudioContext().state!=='running') {
       getAudioContext().resume();
       }
   if (mouseX > 0 && mouseX < width && mouseY < height && mouseY > 0) {
