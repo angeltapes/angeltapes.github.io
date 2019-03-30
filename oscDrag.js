@@ -3,13 +3,11 @@ var playing = false;
 
 function setup() {
   canvas=createCanvas(screen.availWidth*3.5,screen.availHeight*3);
- 
-  textAlign(CENTER);
-
+  canvas.class('phoneCanvas');
   osc = new p5.Oscillator();
   osc.setType('sine');
   //osc.freq(1240);
-  osc.amp(0);
+  osc.amp(0.5);
   osc.start();
   background(255);
 }
