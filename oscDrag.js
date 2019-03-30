@@ -16,8 +16,8 @@ function setup() {
 
 function draw() {
   fill(100,mouseY,mouseX);
-  ellipse(mouseX,mouseX,mouseX-pmouseX,mouseY-pmouseY);
-  text('click to play', width/2, height/2);
+  ellipse(mouseX,mouseY,mouseX-pmouseX,mouseY-pmouseY);
+
 }
 
 function touchStarted() {
