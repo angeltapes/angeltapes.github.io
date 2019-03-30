@@ -19,6 +19,9 @@ function draw() {
 }
 
 function touchStarted() {
+  if (getAudioContext().state!=='running') {
+    getAudioContext().resume();
+  }
   osc.freq(mouseY*3);
   osc.amp(1);
 }
