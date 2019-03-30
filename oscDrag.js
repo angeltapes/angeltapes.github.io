@@ -23,8 +23,8 @@ function draw() {
 function touchStarted() {
   osc.freq(mouseY*3);
   osc.amp(1);
-  }
 }
+
 
 function touchEnded (){
   osc.amp(0);
