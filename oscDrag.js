@@ -15,14 +15,14 @@ function setup() {
 function draw() {
   fill(100,mouseY,mouseX);
   ellipse(mouseX,mouseY,mouseX-pmouseX,mouseY-pmouseY);
-
+  osc.freq(mouseY+mouseX);
 }
 
 function touchStarted() {
   if (getAudioContext().state!=='running') {
     getAudioContext().resume();
   }
-  osc.freq(mouseY*3);
+  
   osc.amp(1);
 }
 
