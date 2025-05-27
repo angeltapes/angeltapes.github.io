@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<!-- the main language of the page declared -->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+
+    <!-- a viewport declaration which does not disable zooming -->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+
+    <link rel="stylesheet" href="https://bobbyking.glitch.me/bids.css" />
+
+    <!-- Add icon library -->
+    <script
+      src="https://kit.fontawesome.com/69d337d708.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--     Add a P5.js sketch  -->
+    <!-- keep the line below for OpenProcessing compatibility -->
+    <script src="https://openprocessing.org/openprocessing_sketch.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.10.0/lib/p5.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.10.0/lib/addons/p5.sound.min.js"></script>
+
+    <!-- a descriptive label for the page -->
+    <title>Analytics | WinCentral</title>
+  </head>
+
+  <body>
+    <!-- a handy skip link for keyboard users -->
+    <div id="skiptocontent">
+      <a href="#main">skip to main content</a>
+    </div>
+
+    <!--     
+
+Header 
+
+-->
+
+    <!-- logo / page navigation etc. goes here -->
+    <header role="banner">
+      <!-- Use any element to open the sidenav -->
+      <!--      <img src="https://cdn.glitch.global/96fa22db-2a31-47fd-af60-76cd25d18ae6/Moolabank%20logo.svg?v=1727205720722" alt="Moolabank logo">  -->
+      <h1>WinCentral</h1>
+      <p>
+        <i class="fa-solid fa-user" style="margin-right: 1em"></i>Welcome back,
+        Pavinder
+      </p>
+    </header>
+
+    <div id="pageTitle">
+      <h2>
+        Home
+        <!--         <span id="account-no">My Dashboard</span> -->
+      </h2>
+    </div>
+
+    <!--
+
+    Start of Main section
+
+    -->
+
+    <style></style>
+    <main id="main" role="main">
+      <!-- this page’s unique content -->
+
+      <!--
+
+    Start of Left column
+
+    -->
+      <section class="left-column">
+        <!--     
+
+    Slide-in panel 
+
+    -->
+
+        <div id="mySidenav" class="sidenav">
+          <h2>Menu</h2>
+
+          <ul>
+            <li>
+              <a href="bids.html"><i class="fa-solid fa-house"></i>Home</a>
+            </li>
+            <li><i class="fa-solid fa-briefcase"></i>Bids</li>
+            <li style="color#0e5d51">
+              <a href="#"
+                ><i class="fa-solid fa-chart-simple"></i
+                ><strong>Analytics</strong></a
+              >
+            </li>
+            <li>
+              <a href="#"><i class="fa-solid fa-book"></i>Training</a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-solid fa-comment"></i>Memos</a>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!--
+
+    End of Left column
+
+    -->
+      <!--
+
+    Start of Right column
+
+    -->
+
+      <section class="right-column">
+        <h1>Analytics</h1>
+
+        <!--         icons - 
+        <i class="fa-solid fa-circle-chevron-up"> 
+ <i class="fa-solid fa-briefcase"></i>
+<i class="fa-solid fa-check"></i>
+-->
+
+        <!--         
+
+Callouts
+
+-->
+
+        <!--         Layout cards -->
+        <div class="cards">
+          <card>
+            <h3>Pending bids (2)</h3>
+            <p class="callout-text">£140,000</p>
+          </card>
+          <card>
+            <h3>In progress (5)</h3>
+            <p class="callout-text">£458,000</p>
+          </card>
+          <card>
+            <h3>Completed (2)</h3>
+            <p class="callout-text">£39,000</p>
+          </card>
+          <card>
+            <h3>Cost per bid</h3>
+            <p class="callout-text">£38,000</p>
+          </card>
+          <card>
+            <h3>ROI</h3>
+            <p class="callout-text">
+              <i class="fa-solid fa-circle-chevron-up"></i>
+              78%
+            </p>
+          </card>
+          <card>
+            <h3>Win ratio</h3>
+            <p class="callout-text">
+              <i class="fa-solid fa-circle-chevron-up"></i>
+              28%
+            </p>
+          </card>
+        </div>
+
+        <!--         
+
+Bids by stage bars 
+
+-->
+        <style>
+          .two-card-column {
+            display: grid;
+            grid-template-columns: 50% 50%;
+          }
+          .column-block h3 {
+            font-size: 1.3em;
+          }
+          .column-block-text {
+            font-size: 2em;
+            margin: 0;
+          }
+        </style>
+        <h2>Bids, by stage</h2>
+        <section class="two-card-column">
+          <column-card>
+            <style>
+              .dynamic-cell-alt {
+                background-color: #acbcd5;
+                padding: 0.5em;
+              }
+              .bids-table {
+                border-style: none;
+              }
+              .bids-table tr {
+                border-style: none;
+                background-color: none;
+              }
+            </style>
+            <table class="bids-table">
+              <tr class="bids-table__row">
+                <td class="bids-table__cell">Pending</td>
+                <td class="bids-table__cell">
+                  <span class="dynamic-cell-alt" style="padding-right: 8vw"
+                    >2</span
+                  >
+                </td>
+              </tr>
+              <tr class="bids-table__row">
+                <td class="bids-table__cell">In progress</td>
+                <td class="bids-table__cell">
+                  <span class="dynamic-cell-alt" style="padding-right: 20vw"
+                    >5</span
+                  >
+                </td>
+              </tr>
+              <tr class="bids-table__row">
+                <td class="bids-table__cell">1st review</td>
+                <td class="bids-table__cell">
+                  <span class="dynamic-cell-alt" style="padding-right: 4vw"
+                    >1</span
+                  >
+                </td>
+              </tr>
+              <tr class="bids-table__row">
+                <td class="bids-table__cell">Completed</td>
+                <td class="bids-table__cell">
+                  <span class="dynamic-cell-alt" style="padding-right: 16vw"
+                    >4</span
+                  >
+                </td>
+              </tr>
+              <tr class="bids-table__row">
+                <td class="bids-table__cell">Total bids</td>
+                <td class="bids-table__cell">12</td>
+              </tr>
+            </table>
+          </column-card>
+          <column-card>
+            <style>
+              .card-list {
+                font-size: 1.6em;
+                list-style: none;
+              }
+              .list-call-out {
+                background: #acbcd5;
+
+                border-radius: 30%;
+                padding: 0.3em 0.6em;
+                margin-right: 1em;
+              }
+            </style>
+
+            <ul class="card-list">
+              <li><span class="list-call-out">8</span>Live bids</li>
+              <li><span class="list-call-out">1</span>Bids at risk</li>
+              <li><span class="list-call-out">8</span>Days per bid</li>
+              <li><span class="list-call-out">58</span>Hours per bid</li>
+            </ul>
+          </column-card>
+        </section>
+
+        <section class="two-card-column">
+          <column-card>
+            <!--           
+
+        Coverage trends 
+
+        -->
+
+            <h2>Coverage trends</h2>
+            <p class="card-list">
+              <span class="list-call-out">62%</span> Question coverage
+            </p>
+            <style>
+              #header-shape-gradient {
+                --color-stop: #acbcd5;
+                --color-bot: #fff;
+              }
+
+              .shape {
+                width: 300px;
+                height: 200px;
+              }
+
+              .shape .gradient-bg {
+                fill: url(#header-shape-gradient) #fff;
+                stroke-width: 1;
+              }
+              .line-chart {
+              }
+            </style>
+            <svg
+              viewBox="0 0 100 70"
+              xmlns="http://www.w3.org/2000/svg"
+              preserveAspectRatio="none"
+              class="shape"
+            >
+              <defs>
+                <linearGradient id="header-shape-gradient" x2="0.35" y2="1">
+                  <stop offset="0%" stop-color="var(--color-stop)" />
+                  <stop offset="80%" stop-color="var(--color-bot)" />
+                  <stop offset="100%" stop-color="var(--color-bot)" />
+                </linearGradient>
+              </defs>
+              <g>
+                <line
+                  x1="0"
+                  y1="0"
+                  x2="0"
+                  y2="50"
+                  style="stroke: grey; stroke-width: 1"
+                />
+                <line
+                  x1="0"
+                  y1="50"
+                  x2="100"
+                  y2="50"
+                  style="stroke: grey; stroke-width: 1"
+                />
+                <polygon
+                  class="gradient-bg"
+                  points="0,50 10,48 20,43 30,37 40,35 50,29 60,13 70,11 80,10 90,5 100,3 100,50"
+                  stroke="grey"
+                  stroke-weight="1"
+                />
+                <circle r="1" cx="10" cy="48" fill="orange" />
+                <circle r="1" cx="20" cy="43" fill="orange" />
+                <circle r="1" cx="30" cy="37" fill="orange" />
+                <circle r="1" cx="40" cy="35" fill="orange" />
+                <circle r="1" cx="50" cy="29" fill="orange" />
+                <circle r="1" cx="60" cy="13" fill="orange" />
+                <circle r="1" cx="70" cy="11" fill="orange" />
+                <circle r="1" cx="80" cy="10" fill="orange" />
+                <circle r="1" cx="90" cy="5" fill="orange" />
+                <circle r="1" cx="100" cy="4" fill="orange" />
+                <text x="0" y="60" fill="grey" font-size="4">Jan</text>
+                <text x="30" y="60" fill="grey" font-size="4">Mar</text>
+                <text x="60" y="60" fill="grey" font-size="4">May</text>
+                <text x="90" y="60" fill="grey" font-size="4">Jul</text>
+              </g>
+            </svg>
+          </column-card>
+          <column-card>
+            <!--           
+
+Score trends 
+
+-->
+
+            <h2>Score trends</h2>
+                        <p class="card-list">
+              <span class="list-call-out">74%</span> Question score
+            </p>
+             <svg
+              viewBox="0 0 100 70"
+              xmlns="http://www.w3.org/2000/svg"
+              preserveAspectRatio="none"
+              class="shape"
+            >
+              <defs>
+                <linearGradient id="header-shape-gradient" x2="0.35" y2="1">
+                  <stop offset="0%" stop-color="var(--color-stop)" />
+                  <stop offset="80%" stop-color="var(--color-bot)" />
+                  <stop offset="100%" stop-color="var(--color-bot)" />
+                </linearGradient>
+              </defs>
+              <g>
+                <line
+                  x1="0"
+                  y1="0"
+                  x2="0"
+                  y2="50"
+                  style="stroke: grey; stroke-width: 1"
+                />
+                <line
+                  x1="0"
+                  y1="50"
+                  x2="100"
+                  y2="50"
+                  style="stroke: grey; stroke-width: 1"
+                />
+                <polygon
+                  class="gradient-bg"
+                  points="0,50 10,49 20,48 30,48 40,39 50,37 60,36 70,31 80,29 90,29 100,23 100,50"
+                  stroke="grey"
+                  stroke-weight="1"
+                />
+                <circle r="1" cx="10" cy="49" fill="orange" />
+                <circle r="1" cx="20" cy="48" fill="orange" />
+                <circle r="1" cx="30" cy="48" fill="orange" />
+                <circle r="1" cx="40" cy="39" fill="orange" />
+                <circle r="1" cx="50" cy="37" fill="orange" />
+                <circle r="1" cx="60" cy="36" fill="orange" />
+                <circle r="1" cx="70" cy="31" fill="orange" />
+                <circle r="1" cx="80" cy="29" fill="orange" />
+                <circle r="1" cx="90" cy="29" fill="orange" />
+                <circle r="1" cx="100" cy="23" fill="orange" />
+                <text x="0" y="60" fill="grey" font-size="4">Jan</text>
+                <text x="30" y="60" fill="grey" font-size="4">Mar</text>
+                <text x="60" y="60" fill="grey" font-size="4">May</text>
+                <text x="90" y="60" fill="grey" font-size="4">Jul</text>
+              </g>
+            </svg>
+          </column-card>
+        </section>
+        <!--           
+
+Bids table 
+
+-->
+
+        <table class="w3c-table bids-table">
+          <caption>
+            Bids
+          </caption>
+          <tr>
+            <th scope="col"><i class="fa-solid fa-chevron-down"></i>Name</th>
+            <th scope="col">Created</th>
+            <th scope="col">Description</th>
+            <th scope="col">Target organisation</th>
+            <th scope="col">Bid owner</th>
+            <th scope="col">Open</th>
+          </tr>
+          <tr scope="row">
+            <td>Glasgow University Building</td>
+            <td>1 April</td>
+            <td>New lecture hall</td>
+            <td>Glasgow University</td>
+            <td>Bobby King</td>
+            <td style="text-align: center">
+              <i
+                class="fa-solid fa-circle-chevron-right"
+                style="color: #783c90"
+              ></i>
+            </td>
+          </tr>
+          <tr scope="row">
+            <td>Glasgow University Building</td>
+            <td>1 April</td>
+            <td>New lecture hall</td>
+            <td>Glasgow University</td>
+            <td>Bobby King</td>
+            <td style="text-align: center">
+              <i
+                class="fa-solid fa-circle-chevron-right"
+                style="color: #783c90"
+              ></i>
+            </td>
+          </tr>
+          <tr scope="row">
+            <td>Glasgow University Building</td>
+            <td>1 April</td>
+            <td>New lecture hall</td>
+            <td>Glasgow University</td>
+            <td>Bobby King</td>
+            <td style="text-align: center">
+              <i
+                class="fa-solid fa-circle-chevron-right"
+                style="color: #783c90"
+              ></i>
+            </td>
+          </tr>
+          <tr scope="row">
+            <td>Glasgow University Building</td>
+            <td>1 April</td>
+            <td>New lecture hall</td>
+            <td>Glasgow University</td>
+            <td>Bobby King</td>
+            <td style="text-align: center">
+              <i
+                class="fa-solid fa-circle-chevron-right"
+                style="color: #783c90"
+              ></i>
+            </td>
+          </tr>
+          <tr scope="row">
+            <td>Glasgow University Building</td>
+            <td>1 April</td>
+            <td>New lecture hall</td>
+            <td>Glasgow University</td>
+            <td>Bobby King</td>
+            <td style="text-align: center">
+              <i
+                class="fa-solid fa-circle-chevron-right"
+                style="color: #783c90"
+              ></i>
+            </td>
+          </tr>
+          <tr scope="row">
+            <td>Glasgow University Building</td>
+            <td>1 April</td>
+            <td>New lecture hall</td>
+            <td>Glasgow University</td>
+            <td>Bobby King</td>
+            <td style="text-align: center">
+              <i
+                class="fa-solid fa-circle-chevron-right"
+                style="color: #783c90"
+              ></i>
+            </td>
+          </tr>
+          <tr scope="row">
+            <td>Glasgow University Building</td>
+            <td>1 April</td>
+            <td>New lecture hall</td>
+            <td>Glasgow University</td>
+            <td>Bobby King</td>
+            <td style="text-align: center">
+              <i
+                class="fa-solid fa-circle-chevron-right"
+                style="color: #783c90"
+              ></i>
+            </td>
+          </tr>
+          <tr scope="row">
+            <td>Glasgow University Building</td>
+            <td>1 April</td>
+            <td>New lecture hall</td>
+            <td>Glasgow University</td>
+            <td>Bobby King</td>
+            <td style="text-align: center">
+              <i
+                class="fa-solid fa-circle-chevron-right"
+                style="color: #783c90"
+              ></i>
+            </td>
+          </tr>
+          <tr scope="row">
+            <td>Glasgow University Building</td>
+            <td>1 April</td>
+            <td>New lecture hall</td>
+            <td>Glasgow University</td>
+            <td>Bobby King</td>
+            <td style="text-align: center">
+              <i
+                class="fa-solid fa-circle-chevron-right"
+                style="color: #783c90"
+              ></i>
+            </td>
+          </tr>
+          <tr scope="row">
+            <td>Glasgow University Building</td>
+            <td>1 April</td>
+            <td>New lecture hall</td>
+            <td>Glasgow University</td>
+            <td>Bobby King</td>
+            <td style="text-align: center">
+              <i
+                class="fa-solid fa-circle-chevron-right"
+                style="color: #783c90"
+              ></i>
+            </td>
+          </tr>
+        </table>
+      </section>
+      <!--       
+
+      End of right column 
+
+      -->
+
+      <!--
+
+      End of Main section
+
+      -->
+    </main>
+
+    <!--     
+
+    Slide-up panels 
+
+    -->
+
+    <!--     <div id="payPanel" class="slidingpage">pay</div> -->
+    <!--     <div id="trackPanel" class="slidingpage">track</div>
+    <div id="alertsPanel" class="slidingpage">alerts</div> -->
+
+    <footer id="footer" role="contentinfo">
+      © 2025 Optimum Business Growth
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<!-- the main language of the page declared -->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+
+    <!-- a viewport declaration which does not disable zooming -->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <!--     Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Add icon library -->
+    <script
+      src="https://kit.fontawesome.com/69d337d708.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- a descriptive label for the page -->
+    <title>Bobby King's Glitch website</title>
+  </head>
+
+  <body>
+    <!-- a handy skip link for keyboard users -->
+    <div id="skiptocontent">
+      <a href="#main">skip to main content</a>
+    </div>
+
+    <!-- logo / page navigation etc. goes here -->
+    <header role="banner">
+      <!-- Use any element to open the sidenav -->
+      <h1>SVG sandpit</h1>
+    </header>
+
+    <h1 id="pageTitle">Home</h1>
+
+    <!--
+
+    Start of Main section
+
+    -->
+
+    <main id="main" role="main">
+      <!-- this page’s unique content -->
+      <p>A gallery of SVG experiments</p>
+      <h2>Bar chart</h2>
+      <style>
+        .graph-line {
+          stroke: #245591;
+          stroke-width: 5;
+        }
+        .graph-bar {
+          fill: #245591;
+        }
+      </style>
+      <svg width="300" height="130" xmlns="http://www.w3.org/2000/svg">
+        <line x1="0" y1="0" x2="0" y2="110" class="graph-line" />
+        <line x1="0" y1="110" x2="300" y2="110" class="graph-line" />
+        <rect
+          width="20"
+          height="100"
+          x="10"
+          y="10"
+          rx="5"
+          ry="5"
+          class="graph-bar"
+        />
+        <rect
+          width="20"
+          height="80"
+          x="40"
+          y="30"
+          rx="5"
+          ry="5"
+          class="graph-bar"
+        />
+        <rect
+          width="20"
+          height="95"
+          x="70"
+          y="15"
+          rx="5"
+          ry="5"
+          class="graph-bar"
+        />
+        <rect
+          width="20"
+          height="60"
+          x="100"
+          y="50"
+          rx="5"
+          ry="5"
+          class="graph-bar"
+        />
+        <rect
+          width="20"
+          height="45"
+          x="130"
+          y="65"
+          rx="5"
+          ry="5"
+          class="graph-bar"
+        />
+        <rect
+          width="20"
+          height="58"
+          x="160"
+          y="52"
+          rx="5"
+          ry="5"
+          class="graph-bar"
+        />
+        <rect
+          width="20"
+          height="32"
+          x="190"
+          y="78"
+          rx="5"
+          ry="5"
+          class="graph-bar"
+        />
+        <rect
+          width="20"
+          height="38"
+          x="220"
+          y="72"
+          rx="5"
+          ry="5"
+          class="graph-bar"
+        />
+        <rect
+          width="20"
+          height="27"
+          x="250"
+          y="83"
+          rx="5"
+          ry="5"
+          class="graph-bar"
+        />
+        <rect
+          width="20"
+          height="45"
+          x="280"
+          y="65"
+          rx="5"
+          ry="5"
+          class="graph-bar"
+        />
+      </svg>
+      <h2>
+        Line chart
+      </h2>
+            <svg width="300" height="130" xmlns="http://www.w3.org/2000/svg">
+        <line x1="0" y1="0" x2="0" y2="110" class="graph-line" />
+        <line x1="0" y1="110" x2="300" y2="110" class="graph-line" />
+<!--               Bars -->
+        <line x1="0" y1="50" x2="10" y2="60" class="graph-line" />
+        <line x1="10" y1="60" x2="20" y2="30" class="graph-line" />
+        <line x1="20" y1="30" x2="30" y2="46" class="graph-line" />
+        <line x1="30" y1="46" x2="40" y2="23" class="graph-line" />
+        <line x1="40" y1="23" x2="50" y2="87" class="graph-line" />
+        <line x1="50" y1="87" x2="60" y2="54" class="graph-line" />
+        <line x1="60" y1="54" x2="70" y2="12" class="graph-line" />
+        <line x1="70" y1="12" x2="80" y2="5" class="graph-line" />
+        <line x1="80" y1="5" x2="90" y2="20" class="graph-line" />
+        <line x1="90" y1="20" x2="100" y2="110" class="graph-line" />
+        <line x1="100" y1="110" x2="110" y2="110" class="graph-line" />
+      </svg>
+    </main>
+
+    <footer id="footer" role="contentinfo">
+      <h2>About Shoestring UI</h2>
+      <p>
+        A collection of accessible code I've put together. I use it to make
+        quick prototypes of web pages, apps and software.
+      </p>
+      <p>
+        Not much of of this is original. I've taken code from
+        <a href="https://heydonworks.com/" target="_blank">Heydon Pickering</a
+        >'s book Inclusive Design Patterns as well as the W3C schools website.
+      </p>
+      <p>
+        Hire <a href="https://madmarch.co.uk">Madmarch</a> to turn your ideas
+        into prototypes. We can help you test them out on real people.
+      </p>
+      <p>
+        You can also contact me on LinkedIn to discuss your project. I'm
+        <a href="https://www.linkedin.com/in/bobbykingweb/">Bobby King</a>, a
+        designer based in Glasgow. Cheers!
+      </p>
+      <p>&copy; Madmarch 2024</p>
+    </footer>
+
+    <!-- a non-blocking javascript resource -->
+    <script src="script.js"></script>
+  </body>
+</html>

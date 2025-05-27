@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<!-- the main language of the page declared -->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+
+    <!-- a viewport declaration which does not disable zooming -->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+    <!-- a non-blocking stylesheet -->
+    <link rel="stylesheet" href="style.css" media="none" onload="if(media!='all')media='all'">
+    <noscript><link rel="stylesheet" href="style.css"></noscript>
+
+    <!-- Add icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- a descriptive label for the page -->
+    <title>Shoestring UI | Home</title>
+
+  </head>
+
+  <body>
+    <!-- a handy skip link for keyboard users -->
+    <div id="skiptocontent">
+       <a href="#main">skip to main content</a>
+    </div>
+
+    <!-- logo / page navigation etc. goes here -->
+    <header role="banner">
+      <!-- Use any element to open the sidenav -->
+      <p>Shoestring UI</p>
+
+    </header>
+
+
+    <h1 id="pageTitle">
+       SVG sandpit
+    </h1>
+    
+    <main>
+        <!-- 
+                
+                Chart  
+                
+                -->
+                <style>
+                    .data-chart{width:100%; overflow-x: scroll;}
+                </style>
+                <svg height="250" width="600" xmlns="http://www.w3.org/2000/svg" class="data-chart">
+                    <defs>
+                        <style>
+                            text{font-family: 'Helvetica Neue', sans-serif; }
+                        </style>
+                    </defs>
+
+                    <title>Total beds per 100,000 population in Suffolk: 1 April 2021 to 1 November 2023</title>
+                    
+                    <!-- 	Y Scale -->
+                    <text class="axis-text"x="0" y="50" fill="#666">2,400</text>
+                    <text class="axis-text"x="0" y="125" fill="#666">1,200</text>
+                    <text class="axis-text"x="42" y="200" fill="#666">0</text>
+                    
+                    <g transform="translate(20,0)">
+                        <!-- 		Axes -->
+                        <line x1="50" y1="0" x2="50" y2="200" style="stroke:#666;stroke-width:2" />
+                        <line x1="50" y1="200" x2="600" y2="200" style="stroke:#666;stroke-width:2" />
+                        <rect width="600" height="2" x="50" y="50" fill="#e1e1e1" />
+                        <rect width="600" height="2" x="50" y="120" fill="#e1e1e1" />
+                        
+                        <!-- 		X Scale -->
+                        <text class="axis-text"x="50" y="220" fill="#666">2021</text>
+                        <text class="axis-text"x="250" y="220" fill="#666">2022</text>
+                        <text class="axis-text"x="450" y="220" fill="#666">2023</text>
+                        
+                        <!-- 		Lines -->
+                        <g transform="translate(-250,0) scale (2 1)">
+                            <!-- Total beds -->
+                            <polyline points="150,110 200,90 250,80 300,90 350,82 400,65, 450,80"
+                            style="fill:none;stroke:purple;stroke-width:3" />
+                            
+                            <!-- Dementia residential -->
+                            <polyline points="150,169 200,173 250,152 300,158 350,143 400,154, 450,158"
+                            style="fill:none;stroke:gold;stroke-width:3" />
+                            
+                            <!-- Dementia nursing -->
+                            <polyline points="150,194 200,193 250,179 300,191 350,193 400,189, 450,195"
+                            style="fill:none;stroke:orange;stroke-width:3" />
+                            
+                        </g>
+                    </svg>  
+  </main>
+
+  <footer id="footer" role="contentinfo">
+  &copy; AMadmarch 2024 
+  </footer>
+
+
+    <!-- a non-blocking javascript resource -->
+    <script src="script.js"></script>
+  </body>
+</html>

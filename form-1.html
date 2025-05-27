@@ -1,0 +1,35 @@
+<head>
+  <!-- keep the line below for OpenProcessing compatibility -->
+  <script src="https://openprocessing.org/openprocessing_sketch.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.10.0/lib/p5.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.10.0/lib/addons/p5.sound.min.js"></script>
+  <!--     <script src="mySketch.js"></script> -->
+</head>
+<body>
+  <h1>Simple JS routing example</h1>
+  <fieldset>
+    <legend>Where do you want to go?</legend>
+    <div>
+      <input type="radio" name="next-page" id="page-yes" value="yes" />
+      <label for="yes">Yes page</label>
+    </div>
+    <div>
+      <input type="radio" name="next-page" id="page-no" value="no" />
+      <label for="no">No page</label>
+    </div>
+  </fieldset>
+  <button onclick="displayRadioValue()">Submit</button>
+</body>
+<script>
+  const url = new URL(window.location.href);
+  const urlSearch = new URLSearchParams(url.search);
+  const foundPage = urlSearch.get("next-page");
+  localStorage.setItem("myCat", "Rab");
+  function displayRadioValue() {
+    if (document.getElementById("page-yes").checked) {
+      window.location.href = "http://bobbyking.glitch.me/form-1-yes.html?option=yes";
+    } else if (document.getElementById("page-no").checked) {
+      window.location.href = "http://bobbyking.glitch.me/form-1-no.html?option=no";
+    }
+  }
+</script>

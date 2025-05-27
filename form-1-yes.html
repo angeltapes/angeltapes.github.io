@@ -1,0 +1,51 @@
+<head>
+  <!-- keep the line below for OpenProcessing compatibility -->
+  <script src="https://openprocessing.org/openprocessing_sketch.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.10.0/lib/p5.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.10.0/lib/addons/p5.sound.min.js"></script>
+  <!--     <script src="mySketch.js"></script> -->
+</head>
+<body>
+  <h1>Yes</h1>
+  <ul>
+    <li><a href="form.html">Back to start</a></li>
+  </ul>
+
+    <fieldset>
+      <label>What's your name?</label>
+      <p>
+        Click continue to see this on the next page, thanks to local storage. 
+      </p>
+      <input type="text" name="p-name" id="p-name" />
+      <button onclick="alertBox()">Continue</button>
+    </fieldset>
+
+</body>
+<script>
+  const url = new URL(window.location.href);
+  const urlSearch = new URLSearchParams(url.search);
+  const foundPage = urlSearch.get('option');
+  const cat = localStorage.getItem("myCat");
+  function setup(){
+    let p = createP("The local storage item was myCat = " + cat)
+    if (foundPage == "yas"){
+      let p = createP("This paragraph was made by P5 and depends on this-page having the value 'yas'")
+    }
+    else{
+      let p = createP("The value for this page is: " + foundPage + " - change it to Yas to change this message")
+    }
+  }
+  
+  // function draw(){
+  //   background(240,240,90);
+  //   circle(mouseX, mouseY, 50)
+  // }
+  // See https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams/URLSearchParams
+  function alertBox() {    
+    alert("The input content is: " +
+      document.getElementById('p-name').value
+    ); 
+    localStorage.setItem("myName", document.getElementById('p-name').value);
+    window.location.href = "http://bobbyking.glitch.me/form-2.html";
+  }
+</script>

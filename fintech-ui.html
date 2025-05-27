@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<!-- the main language of the page declared -->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+
+    <!-- a viewport declaration which does not disable zooming -->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://bobbyking.glitch.me/fintech-style.css"
+    />
+
+    <!-- Add icon library -->
+    <script
+      src="https://kit.fontawesome.com/69d337d708.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap"
+      rel="stylesheet"
+    />
+    
+    <!--     Add a P5.js sketch  -->
+    <!-- keep the line below for OpenProcessing compatibility -->
+    <script src="https://openprocessing.org/openprocessing_sketch.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.10.0/lib/p5.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.10.0/lib/addons/p5.sound.min.js"></script>
+    
+    <!-- a descriptive label for the page -->
+    <title>Fintech UI | Home</title>
+  </head>
+
+  <body>
+    <!-- a handy skip link for keyboard users -->
+    <div id="skiptocontent">
+      <a href="#main">skip to main content</a>
+    </div>
+
+    <!-- logo / page navigation etc. goes here -->
+    <header role="banner">
+      <!-- Use any element to open the sidenav -->
+      <!--      <img src="https://cdn.glitch.global/96fa22db-2a31-47fd-af60-76cd25d18ae6/Moolabank%20logo.svg?v=1727205720722" alt="Moolabank logo">  -->
+      <h1>MOOLABANK</h1>
+    </header>
+
+    <div id="pageTitle">
+      <h1>Current account <span id="account-no">12345687 | 80 12 34</span></h1>
+      <p></p>
+      <h2>£12,345.67</h2>
+      <p>Pending transactions: £56.68</p>
+    </div>
+
+    <!--
+
+    Start of Main section
+
+    -->
+
+    <style>
+
+    </style>
+    <main id="main" role="main">
+      <!-- this page’s unique content -->
+      <!--
+
+    Start of Right column
+
+    -->
+
+      <section class="right-column">
+        <h2>Transactions</h2>
+        <form>
+          <fieldset>
+            <label class="label" for="search-transactions"> Search </label>
+            <input
+              type="text"
+              name="search-transactions"
+              id="search-transactions"
+            />
+          </fieldset>
+        </form>
+        <h3>Pending payments</h3>
+
+        <ul id="cards">
+          <li>
+            <i class="fa-regular fa-clock"></i>
+            <span class="payee">Tesco </span>
+            <span class="payee-amount">- £12.34</span>
+            <i class="fa-solid fa-circle-chevron-right"></i>
+          </li>
+          <li>
+<i class="fa-regular fa-clock"></i>
+            <span class="payee">Co-op </span>
+            <span class="payee-amount">- £44.34</span>
+            <i class="fa-solid fa-circle-chevron-right"></i>
+          </li>
+          <p>Yesterday</p>
+          <li>
+            <img
+              class="payee-icon"
+              alt="Bank card"
+              src="https://cdn.glitch.global/96fa22db-2a31-47fd-af60-76cd25d18ae6/moola-card.svg?v=1727021852728"
+            />
+            <span class="payee">Council tax </span>
+            <span class="payee-amount">- £123.34</span>
+            <i class="fa-solid fa-circle-chevron-right"></i>
+          </li>
+          <li>
+            <img
+              class="payee-icon"
+              alt="Bank card"
+              src="https://cdn.glitch.global/96fa22db-2a31-47fd-af60-76cd25d18ae6/moola-card.svg?v=1727021852728"
+            />
+            <span class="payee">Rent </span>
+            <span class="payee-amount">- £12.34</span>
+            <i class="fa-solid fa-circle-chevron-right"></i>
+          </li>
+          <p>2 October</p>
+          <li>
+            <img
+              class="payee-icon"
+              alt="Bank card"
+              src="https://cdn.glitch.global/96fa22db-2a31-47fd-af60-76cd25d18ae6/moola-card.svg?v=1727021852728"
+            />
+            <span class="payee">Nisa </span>
+            <span class="payee-amount">- £6.34</span>
+            <i class="fa-solid fa-circle-chevron-right"></i>
+          </li>
+          <li>
+            <img
+              class="payee-icon"
+              alt="Bank card"
+              src="https://cdn.glitch.global/96fa22db-2a31-47fd-af60-76cd25d18ae6/moola-card.svg?v=1727021852728"
+            />
+            <span class="payee">PubCo</span>
+            <span class="payee-amount">- £22.43</span>
+            <i class="fa-solid fa-circle-chevron-right"></i>
+          </li>
+          <li>
+            <img
+              class="payee-icon"
+              alt="Bank card"
+              src="https://cdn.glitch.global/96fa22db-2a31-47fd-af60-76cd25d18ae6/moola-card.svg?v=1727021852728"
+            />
+            <span class="payee">Bus</span>
+            <span class="payee-amount">- £2.34</span>
+            <i class="fa-solid fa-circle-chevron-right"></i>
+          </li>
+          <li>
+            <img
+              class="payee-icon"
+              alt="Bank card"
+              src="https://cdn.glitch.global/96fa22db-2a31-47fd-af60-76cd25d18ae6/moola-card.svg?v=1727021852728"
+            />
+            <span class="payee">M & S</span>
+            <span class="payee-amount">- £32.99</span>
+            <i class="fa-solid fa-circle-chevron-right"></i>
+          </li>
+          <li>
+            <img
+              class="payee-icon"
+              alt="Bank card"
+              src="https://cdn.glitch.global/96fa22db-2a31-47fd-af60-76cd25d18ae6/moola-card.svg?v=1727021852728"
+            />
+            <span class="payee">Tesco </span>
+            <span class="payee-amount">- £12.34</span>
+            <i class="fa-solid fa-circle-chevron-right"></i>
+          </li>
+          <li>
+            <img
+              class="payee-icon"
+              alt="Bank card"
+              src="https://cdn.glitch.global/96fa22db-2a31-47fd-af60-76cd25d18ae6/moola-card.svg?v=1727021852728"
+            />
+            <span class="payee">Bus</span>
+            <span class="payee-amount">- £2.34</span>
+            <i class="fa-solid fa-circle-chevron-right"></i>
+          </li>
+          <li>
+            <img
+              class="payee-icon"
+              alt="Bank card"
+              src="https://cdn.glitch.global/96fa22db-2a31-47fd-af60-76cd25d18ae6/moola-card.svg?v=1727021852728"
+            />
+            <span class="payee">Train</span>
+            <span class="payee-amount">- £2.34</span>
+            <i class="fa-solid fa-circle-chevron-right"></i>
+          </li>
+        </ul>
+
+        <p>
+          <a href="#">Load more</a>
+        </p>
+      </section>
+      <!--       
+
+      End of right column 
+
+      -->
+            <!--
+
+    Start of Left column
+
+    -->
+      <section class="left-column">
+        <h2>
+          Your spending
+        </h2>
+        <!--         
+
+        Embedded diagram made with P5 
+
+        -->
+        <div id="p5-sketch"></div>
+        <script src="fintech.js"></script>
+      </section>
+      <!--
+
+    End of Left column
+
+    -->
+
+      <!--
+
+      End of Main section
+
+      -->
+    </main>
+
+    <!--     
+
+    Slide-up panels 
+
+    -->
+
+    <!--     <div id="payPanel" class="slidingpage">pay</div> -->
+<!--     <div id="trackPanel" class="slidingpage">track</div>
+    <div id="alertsPanel" class="slidingpage">alerts</div> -->
+
+    <!--     
+
+    Slide-in panel 
+
+    -->
+
+    <div id="mySidenav" class="sidenav">
+      <h2>Menu</h2>
+
+      <ul>
+        <li>
+          <a href="#">Settings</a>
+        </li>
+        <li>
+          <a href="#">Help</a>
+        </li>
+        <li>
+          <a href="#">About</a>
+        </li>
+        <li>
+          <a href="#">Security</a>
+        </li>
+        <li>
+          <a href="#">Accessibility</a>
+        </li>
+        <li>
+          <a onclick="closeNav()">Close</a>
+        </li>
+      </ul>
+    </div>
+
+    <footer id="footer" role="contentinfo">
+      <ul>
+        <li>
+          <i>
+            <img
+              src="https://cdn.glitch.global/96fa22db-2a31-47fd-af60-76cd25d18ae6/moola-home.svg?v=1727021857719"
+              alt="Home icon"
+            />
+          </i>
+          <p>Home</p>
+        </li>
+        <li>
+          <a onclick="upNav()">
+            <i>
+              <img
+                src="https://cdn.glitch.global/96fa22db-2a31-47fd-af60-76cd25d18ae6/moola-alert-white.svg?v=1727121726873"
+                alt="Card icon"
+              />
+            </i>
+            <p>Pay</p>
+          </a>
+        </li>
+        <li>
+          <a href="track.html">
+            <i>
+              <img
+                src="https://cdn.glitch.global/96fa22db-2a31-47fd-af60-76cd25d18ae6/moola-track-white.svg?v=1727121743483"
+                alt="Track icon"
+              />
+            </i>
+            <p>Track</p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i>
+              <img
+                src="https://cdn.glitch.global/96fa22db-2a31-47fd-af60-76cd25d18ae6/moola-alert-white.svg?v=1727121726873"
+                alt="Alert icon"
+              />
+            </i>
+            <p>Alert</p>
+          </a>
+        </li>
+        <li>
+          <a onclick="openNav(mySidenav)">
+            <i>
+              <img
+                src="https://cdn.glitch.global/96fa22db-2a31-47fd-af60-76cd25d18ae6/moola-menu-white.svg?v=1727121748715"
+                alt="Menu icon"
+              />
+            </i>
+            <p>Menu</p>
+          </a>
+        </li>
+      </ul>
+    </footer>
+
+    <!-- a non-blocking javascript resource -->
+    <script src="script.js"></script>
+  </body>
+</html>

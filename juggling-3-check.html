@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<!-- the main language of the page declared -->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+
+    <!-- a viewport declaration which does not disable zooming -->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Add icon library -->
+    <script
+      src="https://kit.fontawesome.com/69d337d708.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- a descriptive label for the page -->
+    <title>JugglingCo | Home</title>
+  </head>
+
+  <body>
+    <!-- a handy skip link for keyboard users -->
+    <div id="skiptocontent">
+      <a href="#main">skip to main content</a>
+    </div>
+
+    <!-- logo / page navigation etc. goes here -->
+    <header role="banner">
+      <!-- Use any element to open the sidenav -->
+      <p>JugglingCo</p>
+    </header>
+
+    <h1 id="pageTitle">Apply for a juggling licence</h1>
+
+    <!--
+
+    Start of Main section
+
+    -->
+
+    <main id="main" role="main">
+      <!-- this page’s unique content -->
+      <h1>Check your answers</h1>
+      <table>
+        <tr>
+          <td>Do you juggle?</td>
+          <td>
+            <span id="doYouJuggle"></span>
+          </td>
+        </tr>
+        <tr>
+          <td>What's your best trick?</td>
+          <td>
+            <span id="bestTrick"></span>
+          </td>
+        </tr>
+      </table>
+      <form action="index.html">
+        <button type="submit" class="primary">Continue</button>
+      </form>
+
+      <!--
+
+      End of Main section
+
+      -->
+    </main>
+
+    <footer id="footer" role="contentinfo">
+      <p>For all your juggling needs.</p>
+      <p>&copy; JugglingCo 2024</p>
+    </footer>
+
+    <!-- a non-blocking javascript resource -->
+    <script>
+      document.getElementById("doYouJuggle").innerHTML =
+        localStorage.getItem("juggles");
+      // const bestTrick = localStorage.getItem("jugglingTrick");
+      document.getElementById("bestTrick").innerHTML =
+        localStorage.getItem("jugglingTrick");
+      function displayRadioValue() {
+        localStorage.setItem(
+          "jugglingTrick",
+          document.getElementById("juggling-trick")
+        );
+        window.location.href =
+          "http://bobbyking.glitch.me/juggling-2-trick.html";
+      }
+    </script>
+  </body>
+</html>

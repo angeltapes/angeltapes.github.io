@@ -1,0 +1,103 @@
+<!-- Add icon library -->
+<script
+  src="https://kit.fontawesome.com/69d337d708.js"
+  crossorigin="anonymous"
+></script>
+<h1>Grid needed</h1>
+<style>
+  .grid-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    background-color: white;
+    padding: 10px;
+  }
+  .grid-item {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid #666;
+    padding: 0 !important;
+    margin: 1em;
+    font-size: 30px;
+    text-align: left;
+    vertical-align: top;
+  }
+
+  .grid-item:nth-child(even) p {
+    padding: 1em;
+  }
+  .grid-item i {
+    margin-right: 1em;
+  }
+
+  .grid-item h3 {
+    color: white;
+    background-color: #0b3e77;
+    padding: 1em;
+    margin: 0;
+  }
+
+  .grid-item p {
+    padding: 0 1em;
+  }
+
+  .purple-card {
+    background: #8789c0;
+  }
+
+  .grey-card {
+    background: #909b8c;
+  }
+
+  .green-card {
+    background: #bfd3c1;
+  }
+
+  .orange-card {
+    background: #d99499;
+  }
+
+  .blue-card {
+    background-color: #9193c5;
+  }
+  
+</style>
+<div class="grid-container">
+  <div class="grid-item">
+    <h3>
+      <i class="fa-solid fa-car"></i>1. A numbered service stage with a
+      representative icon
+    </h3>
+    <p>
+      Describe the stage in detail. Capture any pain points and improvement
+      ideas. "Include verbatim quotes from research."
+    </p>
+    <p>
+      Optional: include an emoji for how the person is feeling at this stage.
+    </p>
+    <p>
+      <i class="fa-solid fa-face-smile grey-icon" alt="smiling face"></i>
+    </p>
+  </div>
+  <div class="grid-item">
+    <p class="grey-card">
+      <i class="fa-solid fa-scale-balanced"></i>Backstage - a policy or legal
+      factor (grey)
+    </p>
+    <p class="green-card">
+      <i class="fa-solid fa-database"></i>Backstage - a technical factor, such
+      as a database (green)
+    </p>
+    <p class="blue-card">
+      <i class="fa-solid fa-calendar-days"></i>Time-based process (blue)
+    </p>
+    <p class="orange-card">
+      <i class="fa-solid fa-circle-exclamation"></i>Pain point or blocker (pink)
+    </p>
+  </div>
+  <div class="grid-item">3</div>
+  <div class="grid-item">4</div>
+  <div class="grid-item">5</div>
+  <div class="grid-item">6</div>
+  <div class="grid-item">7</div>
+  <div class="grid-item">8</div>
+  <div class="grid-item">9</div>
+</div>

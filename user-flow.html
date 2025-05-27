@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<!-- the main language of the page declared -->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+
+    <!-- a viewport declaration which does not disable zooming -->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+
+    <!-- a non-blocking stylesheet -->
+    <link
+      rel="stylesheet"
+      href="style.css"
+      media="none"
+      onload="if(media!='all')media='all'"
+    />
+    <noscript><link rel="stylesheet" href="style.css" /></noscript>
+
+    <!-- Add icon library -->
+    <script
+      src="https://kit.fontawesome.com/69d337d708.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- a descriptive label for the page -->
+    <title>Service Design | Home</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/nunjucks/3.2.4/nunjucks.js"></script>
+  </head>
+
+  <body>
+    <!-- a handy skip link for keyboard users -->
+    <div id="skiptocontent">
+      <a href="#main">skip to main content</a>
+    </div>
+
+    <!-- logo / page navigation etc. goes here -->
+    <header role="banner">
+      <!-- Use any element to open the sidenav -->
+      <p>Design Patterns for Social Housing</p>
+    </header>
+
+    <h1 id="pageTitle">User flow</h1>
+    <p>
+      This shows a linear journey through an online service, with branches. 
+    </p>
+
+    <!--
+
+    Start of Main section
+
+    -->
+
+    <style>
+      /*------------------------------------*\
+    Phones, tablets - devices with a screen width of under 767px
+\*------------------------------------*/
+
+      @media only screen and (max-width: 767px) {
+        .grid-container {
+          display: grid;
+          grid-template-columns: auto;
+          background-color: white;
+          padding: 10px;
+        }
+
+        .grid-item:nth-child(even) {
+          margin: 0;
+        }
+
+        .grid-item:nth-child(odd) {
+          margin-top: 2em;
+        }
+        
+      }
+
+      /*------------------------------------*\
+    Laptops, desktops - devices with a screen width of under 767px
+\*------------------------------------*/
+      @media only screen and (min-width: 768px) {
+        .grid-container {
+          display: grid;
+          grid-template-columns: auto auto;
+          background-color: white;
+          padding: 1em;
+        }
+        .grid-item {
+          margin: 1em;
+        }
+      }
+
+/*------------------------------------*\
+   All styles
+\*------------------------------------*/
+
+      .juggling-flow li{
+         background: #eec9ca;
+        width:25%;
+        padding:1em;
+        margin: 1em
+      }
+      
+      .juggling-embedded li{
+        background: #8789c0;
+      }
+
+
+      .purple-card {
+        
+      }
+
+      .grey-card {
+        background: #e2e4e2;
+      }
+
+      .green-note {
+        background: #bfd3c1;
+      }
+
+      .orange-note {
+        background: #eec9ca;
+      }
+
+    </style>
+    <main id="service-main" role="main">
+      <!-- this page’s unique content -->
+     
+      <ol class="juggling-flow">
+        <li>Do you juggle? <br>Yes / No</li>
+        <li>How many balls can you juggle? <br>1 ball, 2 balls, 3 or more balls</li>
+        <li>Do you want to claim juggling benefit? <br>Yes / no</li>
+        <h3>
+          If the answer is Yes - 
+        </h3>
+        <ol class="juggling-embedded">
+          <li>How much was your income from juggline?<br> Input box</li>
+          <li>Are you a UK taxpayer?<br> Yes / No</li>
+        </ol>
+        <li>What's your best trick?<br>Text area</li>
+        <li>Check your answers</li>
+      </ol>
+
+      <!--
+
+      End of Main section
+
+      -->
+    </main>
+
+       <footer id="footer" role="contentinfo">
+      <h2>About this User Flow</h2>
+      <p>
+        Designers often create these diagrams on boards like Miro or Mural. They might create a final version as a PDF or image file. 
+      </p>
+<p>
+  The best format for sharing online information is through an accessible web page. 
+         </p>
+      <p>&copy; Madmarch 2024</p>
+    </footer>
+
+    <!-- a non-blocking javascript resource -->
+    <script src="script.js"></script>
+  </body>
+</html>

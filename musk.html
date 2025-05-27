@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<!-- the main language of the page declared -->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+
+    <!-- a viewport declaration which does not disable zooming -->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://bobbyking.glitch.me/musk.css"
+    />
+
+    <!-- Add icon library -->
+    <script
+      src="https://kit.fontawesome.com/69d337d708.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap"
+      rel="stylesheet"
+    />
+    
+    <!--     Add a P5.js sketch  -->
+    <!-- keep the line below for OpenProcessing compatibility -->
+    <script src="https://openprocessing.org/openprocessing_sketch.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.10.0/lib/p5.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.10.0/lib/addons/p5.sound.min.js"></script>
+    
+    <!-- a descriptive label for the page -->
+    <title>X Insights | Home</title>
+  </head>
+
+  <body>
+    <!-- a handy skip link for keyboard users -->
+    <div id="skiptocontent">
+      <a href="#main">skip to main content</a>
+    </div>
+
+    <!-- logo / page navigation etc. goes here -->
+    <header role="banner">
+      <!-- Use any element to open the sidenav -->
+      <!--      <img src="https://cdn.glitch.global/96fa22db-2a31-47fd-af60-76cd25d18ae6/Moolabank%20logo.svg?v=1727205720722" alt="Moolabank logo">  -->
+      <h1>X Insights</h1>
+      <p>
+        <i class="fa-solid fa-user" style="margin-right:1em"></i>Welcome back, Elon
+      </p>
+    </header>
+
+    <div id="pageTitle">
+      <h2>My dashboard 
+<!--         <span id="account-no">My Dashboard</span> -->
+      </h2>
+    </div>
+
+    <!--
+
+    Start of Main section
+
+    -->
+
+    <style>
+
+    </style>
+    <main id="main" role="main">
+      <!-- this page’s unique content -->
+
+      <!--
+
+    Start of Left column
+
+    -->
+      <section class="left-column">
+        <!--     
+
+    Slide-in panel 
+
+    -->
+
+    <div id="mySidenav" class="sidenav">
+      <h2>Menu</h2>
+
+      <ul>
+                <li style="color#0e5d51">
+          <i class="fa-solid fa-house"></i><strong>Home</strong>
+        </li>
+        <li>
+          <a href="#"><i class="fa-solid fa-gear"></i>Settings</a>
+        </li>
+        <li>
+          <a href="#"><i class="fa-solid fa-circle-info"></i>Help</a>
+        </li>
+        <li>
+          <a href="#"><i class="fa-solid fa-comment"></i>Talk to someone</a>
+        </li>
+                <li>
+          <a href="#"><i class="fa-solid fa-lock"></i>Security</a>
+        </li>
+      </ul>
+    </div>
+       
+        <!--         
+
+        Embedded diagram made with P5 
+
+        -->
+        <script src="fintech.js">
+        
+        </script>
+      
+      </section>
+      <!--
+
+    End of Left column
+
+    -->
+      <!--
+
+    Start of Right column
+
+    -->
+
+      <section class="right-column">
+
+       <h2>
+        Today's insights
+        </h2>
+        <style>
+          card h3{
+            margin:0;
+            font-size:1.2vw
+          }
+        </style>
+<!--         Layout cards -->
+        <div class="cards">
+        <card>
+        <h3>
+          Share price
+          </h3>
+          <p class="callout-text">
+            <i class="fa-solid fa-circle-chevron-down"></i>-80%
+          </p>
+        </card>
+        <card>
+          <h3>
+          Employees
+          </h3>
+          <p class="callout-text">
+            <i class="fa-solid fa-circle-chevron-down"></i>-80%
+          </p>
+        </card>
+                <card>
+                  <h3>
+          Status
+          </h3>
+          <p class="callout-text">
+            <i class="fa-brands fa-wolf-pack-battalion"></i>Alpha male
+          </p>
+        </card>
+    </div>
+    <h2 style="margin-top:2em">
+      Woke mind virus
+    </h2>
+            <div id="p5-sketch">
+        </div>
+        <!-- a non-blocking javascript resource -->
+            <script src="musk.js">
+        
+        </script>
+    
+                <card>
+                  <h3>
+                    Application status
+                  </h3>
+          <img style="width:80%" src="https://cdn.glitch.global/96fa22db-2a31-47fd-af60-76cd25d18ae6/pie.PNG?v=1730810740759">
+        </card>
+                <card>
+<h3>
+  New applications since 1 April
+                  </h3>
+                  <p>
+                    700
+                  </p>
+          <img style="width:100%" src="https://cdn.glitch.global/96fa22db-2a31-47fd-af60-76cd25d18ae6/line.PNG?v=1730810826994">
+        </card>
+                <card>
+        <h3>
+           <i class="fa-brands fa-searchengin" style="font-size:2em;margin:0.3em; display:block"></i>Run our insight generator
+          </h3>
+         
+        </card>
+                <card>
+        <h3>
+          Insight
+          </h3>
+          <img style="width:80%; height:50px">
+        </card>
+                <card>
+        <h3>
+          Insight
+          </h3>
+          <img style="width:80%; height:50px">
+        </card>
+                <card>
+        <h3>
+          Insight
+          </h3>
+          <img style="width:80%; height:50px">
+        </card>
+                <card>
+        <h3>
+          Insight
+          </h3>
+          <img style="width:80%; height:50px">
+        </card>
+                <card>
+        <h3>
+          Insight
+          </h3>
+          <img style="width:80%; height:50px">
+        </card>
+                <card>
+        <h3>
+          Insight
+          </h3>
+          <img style="width:80%; height:50px">
+        </card>
+                </div>
+      </section>
+      <!--       
+
+      End of right column 
+
+      -->
+
+      <!--
+
+      End of Main section
+
+      -->
+    </main>
+
+    <!--     
+
+    Slide-up panels 
+
+    -->
+
+    <!--     <div id="payPanel" class="slidingpage">pay</div> -->
+<!--     <div id="trackPanel" class="slidingpage">track</div>
+    <div id="alertsPanel" class="slidingpage">alerts</div> -->
+
+
+
+    <footer id="footer" role="contentinfo">
+      <ul>
+        <li>
+          <i>
+            <img
+              src="https://cdn.glitch.global/96fa22db-2a31-47fd-af60-76cd25d18ae6/moola-home.svg?v=1727021857719"
+              alt="Home icon"
+            />
+          </i>
+          <p>Home</p>
+        </li>
+        <li>
+          <a onclick="upNav()">
+            <i>
+              <img
+                src="https://cdn.glitch.global/96fa22db-2a31-47fd-af60-76cd25d18ae6/moola-alert-white.svg?v=1727121726873"
+                alt="Card icon"
+              />
+            </i>
+            <p>Pay</p>
+          </a>
+        </li>
+        <li>
+          <a href="track.html">
+            <i>
+              <img
+                src="https://cdn.glitch.global/96fa22db-2a31-47fd-af60-76cd25d18ae6/moola-track-white.svg?v=1727121743483"
+                alt="Track icon"
+              />
+            </i>
+            <p>Track</p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i>
+              <img
+                src="https://cdn.glitch.global/96fa22db-2a31-47fd-af60-76cd25d18ae6/moola-alert-white.svg?v=1727121726873"
+                alt="Alert icon"
+              />
+            </i>
+            <p>Alert</p>
+          </a>
+        </li>
+        <li>
+          <a onclick="openNav(mySidenav)">
+            <i>
+              <img
+                src="https://cdn.glitch.global/96fa22db-2a31-47fd-af60-76cd25d18ae6/moola-menu-white.svg?v=1727121748715"
+                alt="Menu icon"
+              />
+            </i>
+            <p>Menu</p>
+          </a>
+        </li>
+      </ul>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<!-- the main language of the page declared -->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+
+    <!-- a viewport declaration which does not disable zooming -->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+
+    <!-- a non-blocking stylesheet -->
+    <link
+      rel="stylesheet"
+      href="fintech-style.css"
+      media="none"
+      onload="if(media!='all')media='all'"
+    />
+    <noscript><link rel="stylesheet" href="fintech-style.css" /></noscript>
+
+    <!-- Add icon library -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <!-- a descriptive label for the page -->
+    <title>Fintech UI | Home</title>
+  </head>
+
+  <body>
+    <!-- a handy skip link for keyboard users -->
+    <div id="skiptocontent">
+      <a href="#main">skip to main content</a>
+    </div>
+
+    <!-- logo / page navigation etc. goes here -->
+    <header role="banner">
+      <!-- Use any element to open the sidenav -->
+      <h1>MOOLABANK</h1>
+    </header>
+
+    <div id="pageTitle">
+      <h1>Track your spending</h1>
+      <p>September 2025</p>
+      <br>
+      <p>
+        Spent: 23,592.66 of £25,499.99
+      </p>
+    </div>
+
+    <!--
+
+    Start of Main section
+
+    -->
+
+    <main id="main" role="main">
+      <!-- this page’s unique content -->
+      <style>
+        table {
+          width: 100%;
+        }
+        tr {
+          height: 3em;
+        }
+        .spending-table td:nth-child(2) {
+          text-align: right;
+        }
+        .amount-bar {
+          background-color: #0E5D51;
+          float: right;
+          height:0.5em
+        }
+        td p {margin:0}
+
+      </style>
+      <table class="spending-table">
+        <tr>
+          <td>Rent</td>
+          <td>
+            <p>£1245.67</p>
+            <div class="amount-bar" style="width: 12em"></div>
+          </td>
+        </tr>
+        <tr>
+          <td>Tesco</td>
+          <td>
+            <p>£345.67</p>
+            <div class="amount-bar" style="width: 3em"></div>
+          </td>
+        </tr>
+        <tr>
+          <td>Council tax</td>
+          <td>
+            <p>£145.67</p>
+            <div class="amount-bar" style="width: 1.4em"></div>
+          </td>
+        </tr>
+        <tr>
+          <td>Scottish Power</td>
+          <td>
+            <p>£45.67</p>
+            <div class="amount-bar" style="width: 0.4em"></div>
+          </td>
+        </tr>
+               <tr>
+          <td>Co-op</td>
+          <td>
+            <p>£25.67</p>
+            <div class="amount-bar" style="width: 0.2em"></div>
+          </td>
+        </tr>
+               <tr>
+          <td>Panita Singh</td>
+          <td>
+            <p>£15.00</p>
+            <div class="amount-bar" style="width: 0.1em"></div>
+          </td>
+        </tr>
+                 <tr>
+          <td>Newsquest Ltd</td>
+          <td>
+            <p>£5.99</p>
+            <div class="amount-bar" style="width: 0.1em"></div>
+          </td>
+        </tr>
+      </table>
+
+      <!--
+
+      End of Main section
+
+      -->
+    </main>
+
+    <!--
+
+      End of Main section
+
+    -->
+
+
+    <footer id="footer" role="contentinfo">
+      <ul>
+        <a href="fintech-ui.html">
+        <li>
+          <i>
+            <img
+              src="https://cdn.glitch.global/96fa22db-2a31-47fd-af60-76cd25d18ae6/moola-home.svg?v=1727021857719"
+              alt="Home icon"
+            />
+          </i>
+          <p>Home</p>
+        </li>
+        </a>
+        <li>
+          <a href="#">
+            <i>
+              <img
+                src="https://cdn.glitch.global/96fa22db-2a31-47fd-af60-76cd25d18ae6/moola-card.svg?v=1727021852728"
+                alt="Card icon"
+              />
+            </i>
+            <p>Pay</p>
+          </a>
+        </li>
+        <li>
+          <a href="track.html">
+            <i>
+              <img
+                src="https://cdn.glitch.global/96fa22db-2a31-47fd-af60-76cd25d18ae6/moola-track.svg?v=1727021866761"
+                alt="Track icon"
+              />
+            </i>
+            <p>Track</p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i>
+              <img
+                src="https://cdn.glitch.global/96fa22db-2a31-47fd-af60-76cd25d18ae6/moola-alert.svg?v=1727021848319"
+                alt="Alert icon"
+              />
+            </i>
+            <p>Alert</p>
+          </a>
+        </li>
+        <li>
+          <a
+            href="javascript:void(0);"
+            id="menu"
+            onclick="document.getElementById('hidden').style.display = 'block'"
+          >
+            <i>
+              <img
+                src="https://cdn.glitch.global/96fa22db-2a31-47fd-af60-76cd25d18ae6/moola-menu.svg?v=1727021862564"
+                alt="Menu icon"
+              />
+            </i>
+            <p>Menu</p>
+          </a>
+        </li>
+      </ul>
+    </footer>
+
+    <!-- a non-blocking javascript resource -->
+    <script src="script.js"></script>
+  </body>
+</html>

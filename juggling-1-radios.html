@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<!-- the main language of the page declared -->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+
+    <!-- a viewport declaration which does not disable zooming -->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Add icon library -->
+    <script
+      src="https://kit.fontawesome.com/69d337d708.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- a descriptive label for the page -->
+    <title>JugglingCo | Home</title>
+  </head>
+
+  <body>
+    <!-- a handy skip link for keyboard users -->
+    <div id="skiptocontent">
+      <a href="#main">skip to main content</a>
+    </div>
+
+    <!-- logo / page navigation etc. goes here -->
+    <header role="banner">
+      <!-- Use any element to open the sidenav -->
+      <p>JugglingCo</p>
+    </header>
+
+    <h1 id="pageTitle">Apply for a juggling licence</h1>
+
+    <!--
+
+    Start of Main section
+
+    -->
+
+    <main id="main" role="main">
+      <!-- this page’s unique content -->
+
+      <p>
+        Here's an example form which uses Shoestring UI and local storage to
+        serve up different pages to the user.
+      </p>
+
+      <!--Radio button design by Heydon Pickering - https://codepen.io/SitePoint/pen/qhCba/-->
+      <fieldset class="radioButtons">
+        <legend>Do you juggle?</legend>
+        <label for="page-yes">
+          <input type="radio" value="yes" name="next-page" id="page-yes" />
+          <span>Yes</span>
+        </label>
+        <label for="page-no">
+          <input type="radio" value="no" name="next-page" id="page-no" />
+          <span>No</span>
+        </label>
+      </fieldset>
+      <button type="submit" class="primary" onclick="displayRadioValue()">
+        Continue
+      </button>
+
+      <!--
+
+      End of Main section
+
+      -->
+    </main>
+
+    <footer id="footer" role="contentinfo">
+      <p>For all your juggling needs.</p>
+      <p>&copy; JugglingCo 2024</p>
+    </footer>
+
+    <!-- a non-blocking javascript resource -->
+    <script>
+      function displayRadioValue() {
+        if (document.getElementById("page-yes").checked) {
+          window.location.href =
+            "http://bobbyking.glitch.me/juggling-2-trick.html?juggles=yes";
+        } else if (document.getElementById("page-no").checked) {
+          window.location.href =
+            "http://bobbyking.glitch.me/juggling-1-sorry.html";
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,108 @@
+ <svg width="400" height="247" xmlns="http://www.w3.org/2000/svg">
+                   <rect
+            width="400"
+            height="247"
+            x="0"
+            y="0"
+            rx="2"
+            ry="2"
+            fill="white"
+            border="grey"
+          />
+<!--       <polygon points="100,80 140,100 140,70" style="fill:white;stroke:#000000" />
+    <ellipse rx="70" ry="50" cx="190" cy="80" style="fill:white;stroke:#000000"></ellipse> -->
+
+<!--    Group 1 -->
+               <rect width="50" height="50" x="120" y="110" rx="0" ry="0" fill="gold" border="grey">
+            <animate attributeName="x" begin="0s" dur="8s" from="11" to="120" />
+                 <animate attributeName="y" begin="0s" dur="8s" from="162" to="110" />
+          </rect>
+        <circle cx="50" cy="50" r="50" style="fill:red;">
+    <animate
+      attributeName="cx"
+      begin="0s"
+      dur="8s"
+      from="50"
+      to="90%"
+      repeatCount="indefinite" />
+  </circle>
+   
+<!--    Left Face -->
+    <g
+     id="layer1"
+     transform="translate(-70,0)">
+    <ellipse
+       style="fill:#1a1a1a;stroke:#000000;stroke-width:0.764341;stroke-linecap:square"
+       id="ellipse1695"
+       cx="136.8214"
+       cy="55.598568"
+       rx="26.932932"
+       ry="24.182934" />
+    <ellipse
+       style="fill:#ffffff;stroke:#000000;stroke-width:0.586736;stroke-linecap:square"
+       id="ellipse4110"
+       cx="135.61827"
+       cy="72.166275"
+       rx="28.224861"
+       ry="27.881111" />
+    <rect
+       style="fill:#1a1a1a;stroke:#000000;stroke-width:0.661528;stroke-linecap:square"
+       id="rect4112"
+       width="23.102367"
+       height="47.577957"
+       x="103.63177"
+       y="56.495316" />
+    <ellipse
+       style="fill:#1a1a1a;stroke:#000000;stroke-width:0.764341;stroke-linecap:square"
+       id="ellipse1613"
+       cx="130.6339"
+       cy="55.942318"
+       rx="26.932932"
+       ry="24.182934" />
+    <ellipse
+       style="fill:#ffffff;stroke:none;stroke-width:0.45044;stroke-linecap:square"
+       id="ellipse4944"
+       cx="143.14975"
+       cy="77.657272"
+       rx="5.6579161"
+       ry="9.2956991" />
+  </g>
+   
+<!--   Right face -->
+   <g
+     id="layer1"
+     transform="translate(180,-20)">
+    <ellipse
+       style="fill:#1a1a1a;stroke:#000000;stroke-width:0.81361;stroke-linecap:square"
+       id="ellipse1972"
+       cx="-158.07903"
+       cy="201.50224"
+       rx="27.080172"
+       ry="27.252048"
+       transform="scale(-1,1)" />
+    <ellipse
+       style="fill:#ffffff;stroke:#000000;stroke-width:0.586736;stroke-linecap:square"
+       id="ellipse4138"
+       cx="-151.98346"
+       cy="212.54463"
+       rx="28.224861"
+       ry="27.881111"
+       transform="scale(-1,1)" />
+    <ellipse
+       style="fill:#1a1a1a;stroke:#000000;stroke-width:0.694088;stroke-linecap:square"
+       id="ellipse1810"
+       cx="-167.8759"
+       cy="201.50224"
+       rx="20.43681"
+       ry="26.280561"
+       transform="scale(-1,1)" />
+    <ellipse
+       style="fill:#ffffff;stroke:none;stroke-width:0.661458;stroke-linecap:square"
+       id="path4490"
+       cx="-151.63071"
+       cy="209.42078"
+       rx="6.0766988"
+       ry="7.3528056"
+       transform="scale(-1,1)" />
+  </g>
+        </svg>

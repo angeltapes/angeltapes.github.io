@@ -1,22 +1,258 @@
 <!DOCTYPE html>
-<html>
+<!-- the main language of the page declared -->
+<html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <title>Sound</title>
-    <script language="javascript" type="text/javascript" src="p5/p5.js"></script>
-    <script language="javascript" type="text/javascript" src="p5/addons/p5.sound.js"></script>
-    <script language="javascript" type="text/javascript" src="p5/addons/p5.dom.js"></script>
-    <script src="sketch.js" type="text/javascript"></script>
+    <meta charset="utf-8" />
 
+    <!-- a viewport declaration which does not disable zooming -->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <!--     Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Add icon library -->
+    <script
+      src="https://kit.fontawesome.com/69d337d708.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- a descriptive label for the page -->
+    <title>Angeltapes</title>
   </head>
 
   <body>
-  <h1>Angeltapes</h1>
-  <p>Sounds and art experiments with P5</p>
-    <p><a href="phonepad.html">Phone pad</a></p>
-    <p><a href="osc.html">Oscillator</a></p>
-    <p><a href="oscDrag.html">Draggable Oscillator</a></p>
+    <!-- a handy skip link for keyboard users -->
+    <div id="skiptocontent">
+      <a href="#main">skip to main content</a>
+    </div>
 
+    <!-- logo / page navigation etc. goes here -->
+    <header role="banner">
+      <!-- Use any element to open the sidenav -->
+      <h1>Angeltapes</h1>
+    </header>
 
+    <h1 id="pageTitle">Home</h1>
+
+    <!--
+
+    Start of Main section
+
+    -->
+
+    <main id="main" role="main">
+      <!-- this page’s unique content -->
+      <p>
+        Welcome to my Github pages website. I'm an Interaction designer based in
+        Glasgow. This is my sandpit for building things out of HTML, CSS,
+        vanilla JavaScript and P5.js.
+      </p>
+      <p>
+        <i class="fa-solid fa-hand-point-right"></i>
+        <a href="https://www.linkedin.com/in/bobbykingweb/"
+          >Contact me on LinkedIn</a
+        >
+      </p>
+      <p>Other pages in this Glitch website:</p>
+      <ul>
+                <li><a href="/data-design/ux-mapping.html">UX mapping</a> - blog post</li>
+        <li><a href="/data-design/">Designing accessible data platforms</a> - blog post</li>
+        <li><a href="dashboard-black.html">Data dashboard, black background</a></li>
+        <li><a href="dashboard.html">Data dashboard</a></li>
+        <li><a href="govuk.html">Government data dashboard</a></li>
+        <li><a href="govuk-blank.html">govuk page</a></li>
+        <li><a href="fintech-ui.html">Moolabank</a> - a one-page prototype</li>
+        <li><a href="service-map.html">Service design cards</a></li>
+        <li>
+          <a href="juggling-1-radios.html">Juggling licence</a> - an online form
+          which uses local storage
+        </li>
+        <li>
+          <a href="govuk.html">govuk data dashboard</a> - a data dashboard using the UK's
+          government design system
+        </li>
+                <li>
+          <a href="govuk-buttons.html">govuk prank buttons</a> - silly buttons you can add to a prototype
+        </li>
+                <li>
+          <a href="madmarch.html">Glasgow UX designer</a> - a simplified
+          portfolio
+        </li>
+                        <li>
+          <a href="brain.html">Brain</a> - some animated SVG images
+        </li>
+      </ul>
+      <hr />
+      <h1>Shoestring UI</h1>
+      <p>
+        Shoestring UI is a little collection of accessible HTML and CSS
+        components. I use them building quick prototypes and passing over
+        designs to development teams.
+      </p>
+      <h2>Shoestring UI Base rules</h2>
+      <h1>H1 heading</h1>
+      <h2>H2 heading</h2>
+      <h3>H3 heading</h3>
+      <p>Text p</p>
+      <p class="hint">Hint text p</p>
+      <p><a href="#">Link</a></p>
+      <br />
+      <button type="submit" class="primary">Primary button</button>
+      <button type="submit" class="secondary">Secondary button</button>
+      <p>Some Fontawesome icons:</p>
+      <p>
+        <i class="fa fa-car"></i>
+        <i class="fa fa-car" style="font-size: 48px"></i>
+        <i class="fa fa-car" style="font-size: 60px; color: red"></i>
+      </p>
+      <hr />
+      <h2>Modules</h2>
+      <!--start of form controls-->
+      <form>
+        <fieldset>
+          <legend>Input fields</legend>
+          <label class="label" for="firstname"> First name </label>
+          <input type="text" name="firstname" id="firstname" />
+          <label class="label" for="lastname"> Last name </label>
+          <input type="text" name="lastname" id="lastname" />
+          <label class="label" for="tricky"> Tricky question </label>
+          <p class="hint" for="tricky">Here's a hint</p>
+          <input type="text" name="tricky" id="tricky" />
+        </fieldset>
+
+        <div class="fieldsetError">
+          <label class="label" for="error"> Error state </label>
+          <p class="error" for="error">Oops - try again</p>
+          <input type="text" name="error" class="errorInput" id="error" />
+        </div>
+
+        <h3>Widths</h3>
+        <p>
+          These input fields appear as different lengths on desktop and laptop devices, or 100% width on mobile devices.
+        </p>
+        <input type="text" class="width-one-quarter" />
+        <input type="text" class="width-one-half" />
+        <input type="text" class="width-full" />
+
+        <h3>Radio buttons and check boxes</h3>
+
+        <!--Radio button design based on Heydon Pickering's Codenpen - https://codepen.io/SitePoint/pen/qhCba/-->
+        <fieldset class="radioButtons">
+          <legend>Radio buttons</legend>
+          <label for="accessible">
+            <input
+              type="radio"
+              value="accessible"
+              name="quality"
+              id="accessible"
+            />
+            <span>accessible</span>
+          </label>
+
+          <label for="pretty">
+            <input type="radio" value="pretty" name="quality" id="pretty" />
+            <span>pretty</span>
+          </label>
+
+          <label for="accessible-and-pretty">
+            <input
+              type="radio"
+              value="pretty"
+              name="quality"
+              id="accessible-and-pretty"
+              checked
+            />
+            <span>accessible and pretty</span>
+          </label>
+        </fieldset>
+
+        <fieldset class="checkBoxes">
+          <legend>Check boxes</legend>
+
+          <label for="this">
+            <input type="checkbox" value="this" name="this" id="this" checked />
+            <span>this</span>
+          </label>
+
+          <label for="that">
+            <input type="checkbox" value="that" name="that" id="that" />
+            <span>that</span>
+          </label>
+        </fieldset>
+      </form>
+
+      <table class="w3c-table">
+        <caption>
+          WC3 Table
+        </caption>
+        <tr>
+          <th scope="col">Duck</th>
+          <th scope="col">Breed</th>
+          <th scope="col">Favourite band</th>
+        </tr>
+        <tr scope="row">
+          <td>Donald</td>
+          <td>Disney</td>
+          <td>Slayer</td>
+        </tr>
+        <tr scope="row">
+          <td>Daffy</td>
+          <td>Warner Bros</td>
+          <td>Wu Tang Clan</td>
+        </tr>
+        <tr scope="row">
+          <td>Howard</td>
+          <td>Marvel</td>
+          <td>Vengaboys</td>
+        </tr>
+      </table>
+      <hr />
+      <h2>Layout rules</h2>
+      <h3>General cards</h3>
+      <ul class="cards grid-display">
+        <li>card 1</li>
+        <li>card 2</li>
+        <li>card 3</li>
+      </ul>
+
+      <!--
+
+      End of Main section
+
+      -->
+    </main>
+
+    <footer id="footer" role="contentinfo">
+      <h2>About Shoestring UI</h2>
+      <p>
+        A collection of accessible code I've put together. I use it to make
+        quick prototypes of web pages, apps and software.
+      </p>
+      <p>
+        Not much of of this is original. I've taken code from
+        <a href="https://heydonworks.com/" target="_blank">Heydon Pickering</a
+        >'s book Inclusive Design Patterns as well as the W3C schools website.
+      </p>
+      <p>
+        Hire <a href="https://madmarch.co.uk">Madmarch</a> to turn your ideas
+        into prototypes. We can help you test them out on real people.
+      </p>
+      <p>
+        You can also contact me on LinkedIn to discuss your project. I'm
+        <a href="https://www.linkedin.com/in/bobbykingweb/">Bobby King</a>, a
+        designer based in Glasgow. Cheers!
+      </p>
+      <p>&copy; Madmarch 2025</p>
+    </footer>
+
+    <!-- a non-blocking javascript resource -->
+    <script src="script.js"></script>
   </body>
 </html>

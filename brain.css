@@ -1,0 +1,743 @@
+/* 
+
+Colours 
+
+*/
+
+/* 
+
+Blue for breadcrumbs, buttons - #288128
+Warm yellow for highlights - #fcb701
+
+*/
+
+/*
+
+Fonts
+
+*/
+
+/*
+Headers and empahsis - avantegarde demi
+body text - avante garde book
+*/
+
+/* 
+
+Base styles 
+
+*/
+
+@charset "UTF-8";
+html {
+  font-family: "AvantGarde BT Book", sans-serif;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+#skiptocontent {
+  /*http://daviddickball.uk/2013/04/dont-do-skip-to-content-links-wrong/*/
+  height: 1px;
+  width: 1px;
+  position: absolute;
+  overflow: hidden;
+  top: -10px;
+}
+
+/* Optional menu controls */
+#menuButton {
+  display: inline-block;
+  margin: 0;
+  background-size: 2em 2em;
+  background: #000;
+  color: #fff;
+  border: none;
+  font-size: 1.5em;
+}
+
+#menuButton p {
+  display: none;
+}
+
+#menuButton svg {
+  fill: #fff;
+}
+
+/*
+  HEADER
+*/
+
+header {
+  background-color: #1C201C;
+  margin: 0;
+  padding: 0.3em 0 0.3em 1em;
+  width: 100%;
+  z-index: 1;
+}
+
+header h1 {
+  color: white;
+  font-size: 1.3em;
+  font-family: 'Avantgarde BT Bold', sans-serif;
+  /*   font-family: "Oswald", sans-serif; */
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  display: inline-block;
+}
+
+header p {
+  color: #fff;
+  background:#000;
+  display: inline-block;
+  float: right;
+  margin: 0 1em 1em 0;
+  padding: 0.5em 1em;
+  vertical-align: top;
+  font-size: 1em;
+  border-radius:100%;
+  border:1px solid #fff
+}
+
+header a {
+  color: white;
+}
+
+header img {
+  width: 2em;
+  display: inline;
+}
+
+/*
+  TEXT AND BUTTONS
+*/
+
+#pageTitle {
+  background-color: #288128;
+  color: #FFF;
+  margin: 0;
+  padding: 1em;
+  width: 100%;
+  height: 3em;
+  z-index: 8;
+}
+
+#pageTitle H1,
+#pageTitle H2,
+#pageTitle p {
+  padding: 0;
+  margin: 0;
+}
+
+#pageTitle #account-no {
+  font-size: 1rem;
+  float: right;
+}
+
+#pageTitle p {
+  font-size: 1em;
+}
+
+#pageTitle H2 {
+  font-size: 1em;
+}
+
+h1 {
+  font-size: 2em;
+  font-weight: normal;
+}
+
+h2 {
+  font-size: 1.5em;
+  font-weight: normal;
+}
+
+h3 {
+  font-size: 1.16em;
+  font-weight: normal;
+}
+
+p {
+  font-size: 1em;
+  /* the default, so this line not needed */
+  line-height: 1.5;
+  /* default text colour */
+}
+
+main,
+a,
+.cards .left-column {
+  color: #666;
+  background-color: #fff
+}
+
+.left-column {
+  color: #666;
+  background-color: #fff;
+  padding: 1em;
+}
+
+.right-column {
+  color: #666;
+  background: #eae6e5;
+  /*   was #dfdee5; */
+  padding: 1em 2em;
+  border-left:1px solid #e1e1e1
+}
+
+main p {
+  color: white;
+}
+
+main a:hover {
+  color: orange;
+}
+
+main a:focus {
+  color: gold;
+  text-decoration-style: solid;
+}
+
+main li {
+  line-height: 2em;
+}
+
+#main {
+  width: 100%;
+  background: black;
+}
+
+.full-width-image {
+  width: 95%;
+  margin: 1vw 1vw 2vw 0;
+}
+
+.cards {
+  margin: 2em 0 3em 0;
+  width: 80%;
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  gap: 3em 1em;
+}
+
+card{
+  border: 1px solid #949494;
+  padding:1em;
+  box-shadow: 0 2px 2px 2px #e1e1e1
+}
+
+card i {
+  display: inline-block;
+  font-size:1.8em;
+  color: #288128;
+  margin-right:0.5em
+}
+
+card h3 {
+  margin: 0 0 0.3em 0;
+  font-size: 1.2em;
+  display: inline-block
+}
+
+card p {
+  padding-left: 1.2em
+}
+
+#cards li .fa-clock {
+  padding-top: 0.2em;
+  font-size: 1.4em;
+}
+
+.callout-text i,
+.callout-text-small i {
+  color: #666;
+  font-size:0.8em
+}
+
+#search-transactions {
+  width: 50%;
+}
+
+.primary {
+  font-size: 100%;
+  color: #ffffff;
+  background-color: #288128;
+  padding: 0.5em 0;
+  margin-bottom: 1.5em;
+  border: none;
+  border-radius: 2px;
+  transition: 0.5s;
+  display: block;
+}
+
+.primary:hover {
+  background: #de007a;
+}
+
+.secondary {
+  font-size: 100%;
+  background: #fff;
+  padding: 0.5em 1em;
+  border: solid 1px #84aadf;
+  border-radius: 5px;
+  transition: 0.5s;
+}
+
+.secondary:hover {
+  background: #ff9100;
+}
+
+.primary:focus,
+.secondary:focus {
+  background: gold;
+  color: #000;
+  box-shadow: 2px 2px #666;
+}
+
+.search-box {
+  padding: 0.3em;
+  border-radius: 6px;
+  width: 50%;
+  margin-left: 1em
+}
+
+.bids-table i {
+  margin-right: 0.5em
+}
+
+.primary-button {
+  display: block;
+  margin: 1em 0;
+  padding: 0.5em;
+  background-color: #783c90;
+  color: #fff;
+  border: 0;
+  border-radius: 3px
+}
+
+/*
+  FORMS
+*/
+
+fieldset {
+  border: none;
+  padding: 0;
+}
+
+.hint {
+  /* minor text */
+  color: #666666;
+  font-size: 1rem;
+}
+
+.error {
+  /* error state */
+  color: #ff0000;
+  font-size: 1rem;
+}
+
+.errorState {
+  border: solid 3px red;
+  margin-top: 1em;
+  width: 90%;
+  padding: 1em;
+}
+
+.label {
+  margin: 1.5em 0 0.5em 0;
+  display: block;
+  font-size: 1rem;
+}
+
+.errorInput {
+  border: 2px solid #ffff00;
+}
+
+input {
+  font-size: 100%;
+}
+
+input:focus {
+  box-shadow: 1px -2px #666 inset;
+}
+
+input[type="text"] {
+  display: block;
+  margin: 0;
+  padding: 0.5em;
+  border: 1px solid #666;
+  border-radius: 5px;
+  width: 100%;
+}
+
+[type="radio"] {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.radioButtons,
+.checkBoxes {
+  margin-top: 2em;
+}
+
+/* One radio button per line */
+.radioButtons Label {
+  display: block;
+  cursor: pointer;
+  line-height: 2.5;
+  font-size: 1em;
+}
+
+.checkBoxes label {
+  display: block;
+  cursor: pointer;
+  line-height: 2.5;
+  font-size: 1em;
+}
+
+[type="radio"] + span {
+  display: block;
+}
+
+input[type="select"] {
+  margin: 0.5em;
+  font-size: 100%;
+}
+
+/* the basic, unchecked style */
+[type="radio"] + span:before {
+  content: "";
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.25em;
+  border-radius: 1em;
+  border: 0.06em solid #000;
+  margin-right: 0.75em;
+  transition: 0.5s ease all;
+}
+
+/* the checked style using the :checked pseudo class */
+[type="radio"]:checked + span:before {
+  background: #245591;
+}
+
+/* never forget focus styling */
+[type="radio"]:focus + span:after {
+  content: " â†";
+  font-size: 1em;
+  line-height: 1;
+  vertical-align: -0.125em;
+}
+
+table {
+  margin: 2em 0;
+  text-align: left;
+  vertical-align: top;
+  border-collapse: collapse;
+}
+
+caption {
+  text-align: left;
+  font-size: 1.4em;
+}
+
+th,
+td {
+/*   border: 1px solid #666; */
+  padding: 1.8em 1em;
+}
+
+th {
+  background-color: #e1e1e1;
+  /*     #a15dbc; */
+  color: #666;
+  font-weight: normal;
+}
+
+tr {
+  border-bottom:5px solid #e1e1e1;
+}
+
+tr:hover {
+  text-decoration: underline;
+}
+
+
+/* Uncomment these to get alternativng white and grey table rows */
+/* tr:nth-child(odd) {
+  background-color: #fff;
+}
+
+tr:nth-child(even) {
+  background-color: #e;
+}  */
+
+/*
+  LANDING PAGES
+*/
+
+#cards {
+  list-style: none;
+  padding: 0;
+}
+
+#cards li {
+  border-bottom: 1px solid #245591;
+  color: #666;
+  /*   padding: 0.5em 0 0 0;
+  margin: 0 0 1em 0 */
+}
+
+.payee {
+  margin: 0 1em;
+}
+
+.payee-icon {
+  /*   display:inline;
+  width:2em; */
+}
+
+.payee-round-icon {
+  /*   display:inline;
+  width:1em; */
+}
+
+.payee-amount {
+  float: right;
+  text-align: right;
+}
+
+/*
+  LAYOUT
+*/
+
+hr {
+  margin: 2em 0 2em 0;
+}
+
+.sidenav {
+}
+
+.sidenav h2 {
+  font-size: 1.2em;
+}
+
+.sidenav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sidenav li {
+  padding: 0.3em;
+/*   border-bottom: 1px solid #ccc; */
+}
+
+.sidenav li a {
+  text-decoration: none;
+  display: block;
+  color: #666;
+}
+
+.sidenav li a:hover {
+  text-decoration: underline;
+}
+
+.sidenav i {
+  margin-right: 0.5em;
+}
+
+/*------------------------------------*\
+    devices with a screen width of under 767px
+\*------------------------------------*/
+
+@media only screen and (max-width: 767px) {
+  /* For mobile phones: */
+  main {
+    padding: 0 0 6em 0;
+  }
+
+  #main {
+    margin: 1em;
+  }
+
+  .callout-text {
+    font-size: 1.1em;
+    margin: 0;
+  }
+
+  .callout-text-small {
+    font-size: 1em;
+    margin: 0;
+  }
+
+  .left-column {
+    display: none;
+  }
+
+  .right-column {
+    width: 100%;
+  }
+
+  header {
+    display: block;
+  }
+
+  .primary,
+  .secondary {
+    width: 90%;
+    margin: 1em 0;
+    display: block;
+  }
+
+  /* Different from the Shoestring UI - sticky footer */
+
+  footer {
+    position: fixed;
+    bottom: 0;
+    color: #fff;
+    padding: 0;
+    width: 100%;
+    margin: 2em 0 0 0;
+    height: 5em;
+  }
+
+  footer li p {
+    text-align: center;
+    color: #fff;
+    margin: 0;
+    text-decoration: none;
+  }
+
+  footer ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  footer li {
+    padding: 3%;
+    width: 19%;
+    display: inline-block;
+  }
+
+  footer img {
+    width: 40%;
+    margin-left: 30%;
+  }
+}
+
+/*------------------------------------*\
+    devices with a screen width greater than 768px
+\*------------------------------------*/
+
+@media only screen and (min-width: 768px) {
+  body {
+    color: white;
+    background-color: #1C201C;
+  }
+
+  h1 {
+    font-size: 2.6em;
+  }
+  h2 {
+    font-size: 2em;
+  }
+  h3 {
+    font-size: 1.6em;
+    margin-top: 1.5em;
+  }
+  p,
+  li,
+  a,
+  #tagline {
+    font-size: 1em;
+  }
+
+  header {
+    padding: 1em;
+  }
+
+  main {
+    padding: 0;
+    margin: 0 auto;
+  }
+
+  #main {
+    display: grid;
+    grid-template-columns: 20% 80%;
+  }
+
+  .callout-text {
+    font-size: 2.5em;
+    margin: 0;
+  }
+
+  .callout-text-small {
+    font-size: 1.8em;
+    margin: 0;
+  }
+
+  #cards li {
+    width: 100%;
+  }
+
+  .radioButtons,
+  .checkBoxes {
+    width: 100%;
+  }
+  
+  footer {
+    background:#1C201C
+  }
+
+  footer li p {
+    text-align: center;
+    color: #fff;
+  }
+
+  footer ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 50%;
+  }
+
+  footer li {
+    padding: 0.3em;
+    width: 5em;
+    display: inline-block;
+  }
+
+  footer img {
+    width: 2em;
+    margin-left: 25%;
+  }
+
+  #footer {
+    color: #fff;
+    padding: 1em 0 1em 2em;
+    width: 100%;
+    margin: 2em 0 0 0em;
+    padding-left: 2em;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

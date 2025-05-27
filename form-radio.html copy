@@ -1,0 +1,43 @@
+<head>
+  <!-- keep the line below for OpenProcessing compatibility -->
+  <script src="https://openprocessing.org/openprocessing_sketch.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.10.0/lib/p5.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.10.0/lib/addons/p5.sound.min.js"></script>
+  <!--     <script src="mySketch.js"></script> -->
+</head>
+<body>
+  <h1>My application</h1>
+  <form method="get">
+    <fieldset>
+      <label>What's your name?</label>
+      <input type="text" name="p-name" id="p-name" />
+      <button>Submit</button>
+    </fieldset>
+  </form>
+</body>
+<script>
+  const url = new URL(window.location.href);
+  const urlSearch = new URLSearchParams(url.search);
+  const foundPage = urlSearch.get('this-page');
+  function setup(){
+    if (foundPage == "yas"){
+      let p = createP("This paragraph was made by P5 and depends on this-page having the value 'yas'")
+    }
+    else{
+      let p = createP("The value for this page is: " + foundPage + " - change it to Yas to change this message")
+    }
+  }
+  
+  // function draw(){
+  //   background(240,240,90);
+  //   circle(mouseX, mouseY, 50)
+  // }
+  // See https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams/URLSearchParams
+  function alertBox() {    
+    alert(
+      "URL origin: " + url.origin + " " 
+      + " / URL Search params: " + urlSearch
+      + " / URL Search query: " + foundPage
+    ); //working - use url.origin for https://bobbyking.glitch.me
+  }
+</script>

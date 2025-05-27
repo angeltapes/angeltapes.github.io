@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<!-- Taken from : https://d3-graph-gallery.com/graph/barplot_basic.html -->
+
+<!-- Load d3.js -->
+<script src="https://d3js.org/d3.v4.js"></script>
+
+<!-- Create a div where the graph will take place -->
+<div id="my_dataviz"></div>
+
+<script>
+// set the dimensions and margins of the graph
+var margin = {top: 30, right: 30, bottom: 70, left: 60},
+    width = 460 - margin.left - margin.right,
+    height = 400 - margin.top - margin.bottom;
+
+// append the svg object to the body of the page
+var svg = d3.select("#my_dataviz")
+  .append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+  .append("g")
+    .attr("transform",
+          "translate(" + margin.left + "," + margin.top + ")");
+for (i = 0; i<5; i++){
+  svg.append("rect")
+    .attr("x", i* 30 )
+    .attr("y", "30")
+    .attr("width", "10")
+    .attr("height", "15")
+    .attr("fill", "#69b3a2")
+}
+  d3.select("body")
+  .transition()
+  .duration(3750)
+    .style("background-color", "red");
+
+</script>

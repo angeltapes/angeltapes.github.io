@@ -1,1 +1,557 @@
-.phoneCanvas{width:797px;position:fixed}
+/* 
+
+Base styles 
+
+*/
+
+@charset "UTF-8";
+html {
+  font-size: 62.5%;
+  /*   See https://css-tricks.com/accessible-font-sizing-explained/ */
+  line-height: 100%;
+  font: 100% Helvetica, sans-serif;
+  color: #1a1a1a;
+  font-size: 1rem;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+#skiptocontent {
+  /*http://daviddickball.uk/2013/04/dont-do-skip-to-content-links-wrong/*/
+  height: 1px;
+  width: 1px;
+  position: absolute;
+  overflow: hidden;
+  top: -10px;
+}
+
+/* Optional menu controls */
+#menuButton {
+  display: inline-block;
+  margin: 0;
+  background-size: 2em 2em;
+  background: #000;
+  color: #fff;
+  border: none;
+  font-size: 1.5em;
+}
+
+#menuButton p {
+  display: none;
+}
+
+#menuButton svg {
+  fill: #fff;
+}
+
+/*
+  HEADER
+*/
+
+header {
+  background-color: #2b2b2b;;
+  margin: 0;
+  padding: 2em 1em 2em 2.5em;
+  width: 100%;
+  z-index: 1;
+}
+
+header h1 {
+  color: white;
+  font-family: "Oswald", sans-serif;
+}
+
+header p {
+  color: #fff;
+  display: inline;
+}
+
+header a {
+  color: white;
+}
+
+/*
+  TEXT AND BUTTONS
+*/
+
+#pageTitle {
+  background-color: #245591;
+  color: #fff;
+  font-size: 1.3rem;
+  margin: 0 0 1em 0;
+  padding: 1em 2em;
+  width: 100%;
+  z-index: 8;
+}
+
+h1 {
+  font-size: 2em;
+  font-weight: normal;
+}
+
+h2 {
+  font-size: 1.5em;
+  font-weight: normal;
+}
+
+h3 {
+  font-size: 1.16em;
+  font-weight: normal;
+}
+
+p,
+caption, table, hint-text {
+  font-size: 1.4rem;
+  /* the default, so this line not needed */
+  line-height: 1.5;
+  color: #1a1a1a;
+  /* default text colour */
+}
+
+legend {
+  font-weight: bold;
+  margin-bottom: 1em
+}
+
+fieldset{
+  margin: 2em 0
+}
+
+li {
+  line-height: 1.5em;
+}
+
+caption {
+  text-align: left;
+}
+
+a:hover {
+  color: orange;
+}
+
+a:focus {
+  color: gold;
+  text-decoration-style: solid;
+}
+
+.primary {
+  font-size: 100%;
+  color: #fff;
+  background: #245591;
+  padding: 0.5em 1em;
+  border: none;
+  border-radius: 5px;
+  transition: 0.5s;
+}
+
+.primary:hover {
+  background: #de007a;
+}
+
+.secondary {
+  font-size: 100%;
+  background: #fff;
+  padding: 0.5em 1em;
+  border: solid 1px #84aadf;
+  border-radius: 5px;
+  transition: 0.5s;
+}
+
+.secondary:hover {
+  background: #ff9100;
+}
+
+.primary:focus,
+.secondary:focus {
+  background: gold;
+  color: #000;
+  box-shadow: 2px 2px #666;
+}
+
+/*
+  FORMS
+*/
+
+fieldset {
+  border: none;
+  padding: 0;
+}
+
+.hint {
+  /* minor text */
+  color: #666666;
+  font-size: 1.4rem;
+  margin: 0;
+}
+
+.error {
+  /* error state */
+  color: #ad0000;
+  font-size: 1.4rem;
+}
+
+.errorState {
+  width: 90%;
+}
+
+.fieldsetError {
+  border: solid 3px #ad0000;
+  margin: 1em 0;
+  padding: 1em 0 0 1em;
+}
+
+.label {
+  display: block
+}
+
+.errorInput {
+  border: 2px solid #ffff00;
+}
+
+input {
+  font-size: 100%;
+}
+
+input:focus {
+  box-shadow: 1px -2px #666 inset;
+}
+
+input[type="text"] {
+  display: block;
+  margin: 1em 0 3em 0;
+  padding: 0.5em;
+  border: 1px solid #666;
+  border-radius: 5px;
+}
+
+[type="radio"] {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.radioButtons,
+.checkBoxes {
+  margin-top: 2em;
+}
+
+.radioButtons legend {
+  margin-bottom: 1em;
+}
+
+/* One radio button per line */
+.radioButtons Label {
+  display: block;
+  cursor: pointer;
+  border: 1px solid #fff;
+  padding: 1em
+}
+
+.radioButtons Label:hover,
+.checkBoxes label:hover {
+  transition: 1s;
+  border: 1px solid #666666;
+}
+
+.checkBoxes label {
+  display: block;
+  cursor: pointer;
+  line-height: 1em;
+  padding: 1em;
+  border: 1px solid #fff;
+}
+
+[type="radio"] + span {
+  display: block;
+}
+
+input[type="select"] {
+  margin: 0.5em;
+  font-size: 100%;
+}
+
+/* the basic, unchecked style */
+[type="radio"] + span:before {
+  content: "";
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.25em;
+  border-radius: 1em;
+  border: 0.06em solid #000;
+  margin-right: 0.75em;
+  transition: 0.5s ease all;
+}
+
+/* the checked style using the :checked pseudo class */
+[type="radio"]:checked + span:before {
+  background: #245591;
+}
+
+/* never forget focus styling */
+[type="radio"]:focus + span:after {
+  font-size: 1em;
+  line-height: 1em;
+  vertical-align: -0.125em;
+}
+
+table {
+  margin: 2em 0;
+  text-align: left;
+  vertical-align: top;
+  /*   border-collapse: collapse; */
+}
+
+th,
+td {
+  border: 1px solid #666;
+  padding: 1em;
+}
+
+th {
+  background-color: #245591;
+  color: #fff;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/*
+  LANDING PAGES
+*/
+
+.cards {
+  padding: 1em;
+  margin-right: 0.5em;
+  list-style: none;
+}
+
+.cards li {
+  background-color: #245591;
+  color: #fff;
+  padding: 1.5em 1em;
+  margin: 0 1em 1em 0;
+}
+
+.service-cards {
+  padding: 1em;
+}
+
+.service-cards li {
+  padding: 1.5em 1em;
+  margin: 0 1em 1em 0;
+  font-size: 1.8em;
+  border: 1px solid #666;
+}
+
+.service-cards p {
+  color: #666;
+}
+
+i {
+  padding-right: 0.5em;
+}
+
+.grid-display {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.grid-display li {
+  flex-grow: 1;
+  flex-shrink: 1;
+  /* the default value, in fact */
+  flex-basis: 10em;
+  max-width: 20em;
+}
+
+/*
+  LAYOUT
+*/
+
+hr {
+  margin: 2em 0 2em 0;
+}
+
+/*------------------------------------*\
+    
+    Mobile
+    devices with a screen width of under 767px
+
+\*------------------------------------*/
+
+@media only screen and (max-width: 767px) {
+  h1 {
+    font-size: 8vw;
+    margin: 0;
+    line-height: 1.1;
+  }
+  h2 {
+    font-size: 7vw;
+    margin-top: 1em;
+    line-height: 1;
+  }
+  h3 {
+    font-size: 6vw;
+    margin-top: 1.5em;
+    line-height: 1.1;
+  }
+  
+  p,
+  li,
+  a,
+  legend,
+  label,
+  #tagline,
+  #pageTitle {
+    font-size: 5vw;
+  }
+
+  main {
+    margin: 0
+  }
+
+  #main {
+    margin: 1em;
+  }
+  
+  .w3c-table{
+    font-size:1em
+  }
+  
+  #service-main h2{
+    width: 100%;
+    padding: 1em 1em 0 1em
+  }
+
+  header {
+    display: block;
+  }
+
+  .primary,
+  .secondary {
+    width: 90%;
+    margin: 1em;
+    display: block;
+  }
+
+  .service-cards li {
+    line-height: 1em;
+    width: 100%;
+  }
+  
+  .width-one-quarter, .width-one-half, .width-full{
+    width:100%
+  }
+
+  footer{
+    bottom:0
+  }
+}
+
+/*------------------------------------*\
+
+    Laptops
+    devices with a screen width greater than 768px
+
+\*------------------------------------*/
+
+@media only screen and (min-width: 768px) {
+  h1 {
+    font-size: 2.6vw;
+    margin: 0;
+  }
+  
+  h2 {
+    font-size: 2vw;
+    margin-top: 1em;
+  }
+  
+  h3 {
+    font-size: 1.6vw;
+    margin-top: 1.5em;
+  }
+  
+  p,
+  li,
+  a,
+  legend,
+  label,
+  #tagline {
+    font-size: 1.4vw;
+  }
+  
+  main {
+    padding: 1em 2em;
+  }
+  
+  #main {
+    width:50%
+  }
+  
+  #service-main{
+    width: 100%;
+    padding: 1em
+  }
+  
+  #service-main h2{
+    width: 100%;
+    padding: 1em 1em 0 1em
+  }
+
+  .cards li {
+    width: 30%;
+  }
+
+  .service-cards li {
+    width: 40%;
+  }
+
+  .radioButtons,
+  .checkBoxes {
+    width: 100%;
+  }
+  
+  .width-one-quarter{
+    width:25%
+  }
+
+  .width-one-half{
+    width:50%
+  }
+
+  .width-full{
+    width:100%
+  }
+}
+
+#footer {
+  background: #2b2b2b;;
+  padding: 1em 1em 1em 2em;
+  width: 100%;
+  margin: 2em 0 0 0em;
+  padding-left: 2em;
+}
+
+#footer p,
+#footer h2,
+#footer a {
+  color: #fff;
+}
+
+/*# sourceMappingURL=style.css.map */

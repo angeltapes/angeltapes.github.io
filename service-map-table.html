@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<!-- the main language of the page declared -->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+
+    <!-- a viewport declaration which does not disable zooming -->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+
+    <!-- a non-blocking stylesheet -->
+    <link
+      rel="stylesheet"
+      href="style.css"
+      media="none"
+      onload="if(media!='all')media='all'"
+    />
+    <noscript><link rel="stylesheet" href="style.css" /></noscript>
+
+    <!-- Add icon library -->
+    <script
+      src="https://kit.fontawesome.com/69d337d708.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- a descriptive label for the page -->
+    <title>Service Design | Home</title>
+  </head>
+
+  <body>
+    <!-- a handy skip link for keyboard users -->
+    <div id="skiptocontent">
+      <a href="#main">skip to main content</a>
+    </div>
+
+    <!-- logo / page navigation etc. goes here -->
+    <header role="banner">
+      <!-- Use any element to open the sidenav -->
+      <p>Design Patterns for Social Housing</p>
+    </header>
+
+    <h1 id="pageTitle">Service maps</h1>
+
+    <!--
+
+    Start of Main section
+
+    -->
+
+    <main id="service-main" role="main">
+      <!-- this page’s unique content -->
+
+      <style>
+        
+        .service-table td {
+          padding: 0;
+          border: none;
+          border: 1px solid #666;
+          background-color: white
+        }
+
+        caption {
+          margin-left: 1em;
+        }
+        
+        .service-table h3{
+          background-color: #0b3e77;
+          color: white;
+          padding: 1em
+        }
+
+        .service-table p {
+          padding: 1em 1em 0 1em
+        }
+        
+        .service-table p i{
+          font-size:1.3em
+        }
+        
+        .service-header {
+          background-color: #0b3e77;
+          color: white;
+          padding: 1em;
+          margin: 0;
+          vertical-align: top;
+          line-height: 1.5em
+        }
+        
+        td:nth-child(even) {
+          border: none;
+          vertical-align: top;
+          min-width: 40%
+        }
+        
+        td:nth-child(even) p {
+          margin: 0;
+          color: #000;
+          padding: 1em;
+          line-height: 1.5em;
+          font-size: 1.5rem;
+        }
+        
+        .purple-card {
+          background: #8789C0;
+        }
+        
+        .grey-card {
+          background: #909B8C;
+        }
+        
+        .green-card {
+          background: #BFD3C1;
+        }
+        
+        .orange-card {
+          background: #D99499;
+        }
+        
+        .blue-card{
+          background-color: #9193C5
+        }
+        
+        .grey-icon{
+          color:#666
+        }
+
+        /*------------------------------------*\
+    Phones, tablets - devices with a screen width of under 767px
+\*------------------------------------*/
+
+        @media only screen and (max-width: 767px) {
+          table {
+            border-spacing: 0 4em;
+          }
+          td {
+            width: 100%;
+            display: block;
+          }
+        }
+
+        /*------------------------------------*\
+    Laptops, desktops - devices with a screen width of under 767px
+\*------------------------------------*/
+        @media only screen and (min-width: 768px) {
+          table {
+            border-spacing: 2em 4em;
+          }
+        }
+      </style>
+
+      <!--       Table key -->
+      <table class="service-table">
+        <caption>
+          <h2>Key</h2>
+        </caption>
+        <tbody>
+          <tr>
+            <td>
+              <h3>
+                <i class="fa-solid fa-car"></i>1. A numbered service
+                stage with a representative icon
+              </h3>
+              <p>
+                Describe the stage in detail. Capture any pain points and
+                improvement ideas. "Include verbatim quotes from research."
+              </p>
+              <p>
+                Optional: include an emoji for how the person is feeling at this stage.
+              </p>
+              <p>
+                <i class="fa-solid fa-face-smile grey-icon" alt="smiling face"></i>
+              </p>
+            </td>
+            <td>
+              <p class="grey-card">
+                <i class="fa-solid fa-scale-balanced"></i>Backstage - a policy or legal factor
+                (grey)
+              </p>
+              <p class="green-card">
+                <i class="fa-solid fa-database"></i>Backstage - a technical factor, such as a
+                database (green)
+              </p>
+              <p class="blue-card">
+                <i class="fa-solid fa-calendar-days"></i>Time-based process
+                (blue)
+              </p>
+              <p class="orange-card">
+                <i class="fa-solid fa-circle-exclamation"></i>Pain point or
+                blocker (pink)
+              </p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!--       
+
+Complaints 
+
+-->
+      <table class="service-table">
+        <caption>
+          <h1>A social housing complaints process</h1>
+        </caption>
+        <tr>
+          <td>
+            <h3 class="service-header">
+              <i class="fa-solid fa-face-meh"></i>1. Something goes wrong and
+              the tenant wants to tell the landlord.
+            </h3>
+            <p>
+              Pain points: "I've never met my landlord, I don't know how to get
+              hold of them."
+            </p>
+          </td>
+          <td>
+            <p class="grey-card">
+              <i class="fa-solid fa-scale-balanced"></i>Complaints are regulated
+              by the Housing Ombudsman
+            </p>
+            <p class="green-card">
+              <i class="fa-solid fa-phone-slash"></i>Housing associations offer
+              different contact methods - in person, phone and online
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <h3 class="service-header">
+              <i class="fa-solid fa-magnifying-glass"></i>2. Search for contact
+              information
+            </h3>
+            <p>
+              The tenant searches for contact details for the landlord and
+              complaints information
+            </p>
+            <p>Channels can include:</p>
+            <ul>
+              <li>in person</li>
+              <li>online</li>
+              <li>by phone</li>
+              <li>through chat/messenger</li>
+              <li>by letter</li>
+            </ul>
+          </td>
+          <td>
+            <p class="orange-card">
+              <i class="fa-solid fa-circle-exclamation"></i>The online
+              experience might be poor or hard to navigate
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <h3 class="service-header">
+              <i class="fa-solid fa-phone"></i>3. Make a complaint
+            </h3>
+            <p>
+              The tenant makes the complaint. If they don't speak to someone
+              directly they need to wait for a response.
+            </p>
+          </td>
+          <td>
+            <p class="blue-card">
+              <i class="fa-solid fa-calendar-days"></i>The landlord has up to
+              five working days to reply to the complaint.
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <h3 class="service-header">
+              <i class="fa-solid fa-calendar-days"></i>4. Response received
+            </h3>
+            <p>
+              The tenant received a response from their landlord clarifying
+              their understanding of the complaint and what will happen next.
+            </p>
+          </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            <h3 class="service-header">
+              <i class="fa-regular fa-message"></i>5. Speak directly to an
+              investigating staff member
+            </h3>
+            <p>
+              The investigating staff member talks directly to the tenant to
+              discover better what's gone wrong.
+            </p>
+            <p></p>
+          </td>
+          <td>
+            <p class="blue-card">
+              <i class="fa-solid fa-calendar-days"></i>The landlord has up to
+              ten working days from acknowledging the complaint to investigate.
+            </p>
+            <p class="orange-card">
+              <i class="fa-solid fa-circle-exclamation"></i>Landlords need to be
+              clear about how and when a tenant wants to be contacted. Consider
+              texting them to confirm.
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <h3 class="service-header">
+              <i class="fa-solid fa-file"></i>6. The landlord gives the tenant a
+              written stage 1 complaint outcome
+            </h3>
+            <p>The Housing Officer defines the content.</p>
+            <p>
+              The landlord speaks to the tenant to help improve the complaints
+              process and improve any services that led to the complaint
+            </p>
+          </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            <h3 class="service-header">
+              <i class="fa-solid fa-face-frown"></i>7. The tenant escalates the
+              complaint to stage 2
+            </h3>
+            <p>
+              If the tenant's still unhappy they can escalate the complaint
+              further.
+            </p>
+            <p>
+              A different member of staff takes on the complaint and writes to
+              the tenant.
+            </p>
+          </td>
+          <td>
+            <p class="blue-card">
+              <i class="fa-solid fa-calendar-days"></i>The landlord has up to
+              five working days to acknowledge the escalation.
+            </p>
+          </td>
+        </tr>
+                <tr>
+          <td>
+            <h3 class="service-header">
+              <i class="fa-solid fa-comments"></i>8. The investigating housing officer
+              speaks to the tenant. 
+            </h3>
+            <p>
+              They then investigate the complaint.
+            </p>
+          </td>
+          <td>
+            <p class="blue-card">
+              <i class="fa-solid fa-calendar-days"></i>The landlord has up to
+              20 working days from acknowledging the escalation to resolve the complaint.
+            </p>
+          </td>
+        </tr>
+                        <tr>
+          <td>
+            <h3 class="service-header">
+              <i class="fa-solid fa-file"></i>9. The landlord sends the tenant the stage 2
+              complaint outcome.
+            </h3>
+            <p>
+              They can use several channels to do this. They use content defined by the Housing Officer. 
+            </p>
+          </td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <h3 class="service-header">
+              <i class="fa-solid fa-circle-check"></i>10. The landlord resolves the complaint.
+            </h3>
+            <p>
+              They speak to the tenant to resolve any issues which led to the complaint and improve the complaints process. 
+            </p>
+          </td>
+          <td>
+          </td>
+        </tr>
+      </table>
+
+      <!--
+
+      End of Main section
+
+      -->
+    </main>
+
+    <footer role="contentinfo">&copy; Madmarch 2024</footer>
+
+    <!-- a non-blocking javascript resource -->
+    <script src="script.js"></script>
+  </body>
+</html>

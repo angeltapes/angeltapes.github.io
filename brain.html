@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<!-- the main language of the page declared -->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+
+    <!-- a viewport declaration which does not disable zooming -->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+
+    <link rel="stylesheet" href="https://bobbyking.glitch.me/brain.css" />
+    
+    <!--  Metadata -->
+        <meta property="og:type" content="home page" />
+    <meta property="og:title" content="Brain" />
+    <meta property="og:url" content="https://bobbyking.glitch.me" />
+    <meta
+      property="og:description"
+      content="A page of animated svg images"
+    />
+    <meta
+      property="og:image"
+      content="https://glasgowuxdesigner.co.uk/images/bobbycircular.png"
+    />
+
+    <!-- Add icon library -->
+    <script
+      src="https://kit.fontawesome.com/69d337d708.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Add font Avantegarde BT Bold-->
+    <link
+      href="madmarch.co.uk/fonts/avant-garde-book-bt.TTF"
+      rel="stylesheet"
+    />
+    <link
+      href="madmarch.co.uk/fonts/avant-garde-bt-bold.ttf"
+      rel="stylesheet"
+    />
+
+    <!-- Add a P5.js sketch  -->
+    <!-- keep the line below for OpenProcessing compatibility -->
+    <script src="https://openprocessing.org/openprocessing_sketch.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.10.0/lib/p5.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.10.0/lib/addons/p5.sound.min.js"></script>
+
+    <!-- a descriptive label for the page -->
+    <title>SVG sandpit</title>
+
+    <script src="//unpkg.com/brain.js"></script>
+  </head>
+
+  <body>
+    <!-- a handy skip link for keyboard users -->
+    <div id="skiptocontent">
+      <a href="#main">skip to main content</a>
+    </div>
+
+    <!--     
+
+    Header 
+
+    -->
+
+    <!-- logo / page navigation etc. goes here -->
+    <header role="banner">
+      <!-- Use any element to open the sidenav -->
+      <!--      <img src="https://cdn.glitch.global/96fa22db-2a31-47fd-af60-76cd25d18ae6/Moolabank%20logo.svg?v=1727205720722" alt="Moolabank logo">  -->
+      <h1>SVG sandpit</h1>
+      <!--       <p>
+BK
+      </p> -->
+    </header>
+
+    <div id="pageTitle">
+      <h2>
+        Home
+        <!--         <span id="account-no">My Dashboard</span> -->
+      </h2>
+    </div>
+
+    <!--
+
+    Start of Main section
+
+    -->
+
+    <main id="main" role="main">
+      <!-- this page’s unique content -->
+
+      <!--
+
+    Start of Left column
+
+    -->
+      <section class="left-column">
+        <!--     
+
+    Slide-in panel 
+
+    -->
+
+        <div id="mySidenav" class="sidenav">
+          <ul>
+            <li style="color#0e5d51">
+              <i class="fa-solid fa-house"></i><strong>Home</strong>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!--
+
+    End of Left column
+
+    -->
+      <!--
+
+    Start of Right column
+
+    -->
+
+      <section class="right-column">
+        <h1>SVG sandpit</h1>
+<p style="color:black">
+  Some animated SVG images.
+        </p>
+        <style>
+          #mm-connector {
+            stroke: green;
+            stroke-width: 5;
+          }
+        </style>
+       <img src="mapping.svg">
+        <img src="user-research.svg">
+        <img src="brain.svg">
+      </section>
+      
+      <!--       
+
+      End of right column 
+
+      -->
+
+      <!--
+
+      End of Main section
+
+      -->
+    </main>
+
+  
+
+    <footer id="footer" role="contentinfo">© 2025 Bobby King</footer>
+
+  </body>
+</html>

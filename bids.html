@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<!-- the main language of the page declared -->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+
+    <!-- a viewport declaration which does not disable zooming -->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://bobbyking.glitch.me/bids.css"
+    />
+
+    <!-- Add icon library -->
+    <script
+      src="https://kit.fontawesome.com/69d337d708.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Add font Avantegarde BT Bold-->
+    <link href="madmarch.co.uk/fonts/avant-garde-book-bt.TTF" rel="stylesheet">
+    <link href="madmarch.co.uk/fonts/avant-garde-bt-bold.ttf" rel="stylesheet">
+
+    <!-- Add a P5.js sketch  -->
+    <!-- keep the line below for OpenProcessing compatibility -->
+    <script src="https://openprocessing.org/openprocessing_sketch.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.10.0/lib/p5.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.10.0/lib/addons/p5.sound.min.js"></script>
+
+    <!-- a descriptive label for the page -->
+    <title>Home | WinCentral </title>
+  </head>
+
+  <body>
+    <!-- a handy skip link for keyboard users -->
+    <div id="skiptocontent">
+      <a href="#main">skip to main content</a>
+    </div>
+
+<!--     
+
+Header 
+
+-->
+
+    <!-- logo / page navigation etc. goes here -->
+    <header role="banner">
+      <!-- Use any element to open the sidenav -->
+      <!--      <img src="https://cdn.glitch.global/96fa22db-2a31-47fd-af60-76cd25d18ae6/Moolabank%20logo.svg?v=1727205720722" alt="Moolabank logo">  -->
+      <h1>WINCENTRAL</h1>
+      <p>
+K
+      </p>
+    </header>
+
+    <div id="pageTitle">
+      <h2>
+        Home
+        <!--         <span id="account-no">My Dashboard</span> -->
+      </h2>
+    </div>
+
+    <!--
+
+    Start of Main section
+
+    -->
+
+    <style></style>
+    <main id="main" role="main">
+      <!-- this page’s unique content -->
+
+      <!--
+
+    Start of Left column
+
+    -->
+      <section class="left-column">
+        <!--     
+
+    Slide-in panel 
+
+    -->
+
+        <div id="mySidenav" class="sidenav">
+          <ul>
+            <li style="color#0e5d51">
+              <i class="fa-solid fa-house"></i><strong>Home</strong>
+            </li>
+            <li>
+              <a href="#"><i class="fa-solid fa-briefcase"></i>Bids</a>
+            </li>
+            <li>
+              <a href="bids-analytics.html"><i class="fa-solid fa-chart-simple"></i>Analytics</a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-solid fa-book"></i>Training</a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-solid fa-comment"></i>Memos</a>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!--
+
+    End of Left column
+
+    -->
+      <!--
+
+    Start of Right column
+
+    -->
+
+      <section class="right-column">
+        <h1>Arc Construction</h1>
+                <div class="cards">
+          <card>
+            <i class="fa-solid fa-clock"></i>
+            <h3>Bids pending</h3>
+            <p class="callout-text">£500,000</p>
+          </card>
+          <card>
+            <i class="fa-solid fa-file-pen"></i>
+            <h3>Bids in progress</h3>
+            <p class="callout-text">£1,000,000</p>
+          </card>
+        </div>
+        <style>
+          .button-search{
+              display: grid;
+              grid-template-columns: 15% 85%;
+            gap:6em;
+            margin:0;
+            padding:0;
+            height:2em
+          }
+        </style>
+        <div class="button-search">
+        <button class="primary">
+          + New bid
+        </button>
+          <fieldset>
+          
+        <label><i class="fa-solid fa-magnifying-glass" style="margin-right:0.5em"></i>Search</label>
+        <input class="search-box">
+                    </fieldset>
+             </div>
+         <table class="w3c-table bids-table">
+        <tr>
+          <th scope="col"><i class="fa-solid fa-chevron-down"></i>Name</th>
+          <th scope="col">Deadline</th>
+          <th scope="col">Description</th>
+          <th scope="col">Target organisation</th>
+          <th scope="col">Bid owner</th>
+          <th scope="col">Progress</th>
+        </tr>
+        <tr scope="row">
+          <td>Glasgow University Building</td>
+          <td>1 April</td>
+          <td>New lecture hall</td>
+          <td>Glasgow University</td>
+          <td>Bobby King</td>
+          <td> 
+            <svg width="50" height="10" xmlns="http://www.w3.org/2000/svg">
+               <rect width="50" height="10" x="0" y="0" rx="10" ry="10" fill="#fff" style="stroke-width:1; stroke:#666"/>
+               <rect width="37" height="10" x="0" y="0" rx="10" ry="10" fill="#fcb701" />
+</svg> 
+            65%</td>
+        </tr>
+        <tr scope="row">
+          <td>Glasgow University Building</td>
+          <td>1 April</td>
+          <td>New lecture hall</td>
+          <td>Glasgow University</td>
+          <td>Bobby King</td>
+                      <td><svg width="50" height="10" xmlns="http://www.w3.org/2000/svg">
+               <rect width="50" height="10" x="0" y="0" rx="10" ry="10" fill="#fff" style="stroke-width:1; stroke:#666"/>
+               <rect width="20" height="10" x="0" y="0" rx="10" ry="10" fill="#fcb701" />
+</svg> 
+            40%</td>
+        </tr>
+                   <tr scope="row">
+          <td>Glasgow University Building</td>
+          <td>1 April</td>
+          <td>New lecture hall</td>
+          <td>Glasgow University</td>
+          <td>Bobby King</td>
+                      <td><svg width="50" height="10" xmlns="http://www.w3.org/2000/svg">
+               <rect width="50" height="10" x="0" y="0" rx="10" ry="10" fill="#fff" style="stroke-width:1; stroke:#666"/>
+               <rect width="40" height="10" x="0" y="0" rx="10" ry="10" fill="#fcb701" />
+</svg> 
+            80%</td>
+        </tr>
+                   <tr scope="row">
+          <td>Glasgow University Building</td>
+          <td>1 April</td>
+          <td>New lecture hall</td>
+          <td>Glasgow University</td>
+          <td>Bobby King</td>
+                      <td><svg width="50" height="10" xmlns="http://www.w3.org/2000/svg">
+               <rect width="50" height="10" x="0" y="0" rx="10" ry="10" fill="#fff" style="stroke-width:1; stroke:#666"/>
+               <rect width="37" height="10" x="0" y="0" rx="10" ry="10" fill="#fcb701" />
+</svg> 
+            65%</td>
+        </tr>
+                   <tr scope="row">
+          <td>Glasgow University Building</td>
+          <td>1 April</td>
+          <td>New lecture hall</td>
+          <td>Glasgow University</td>
+          <td>Bobby King</td>
+                      <td><svg width="50" height="10" xmlns="http://www.w3.org/2000/svg">
+               <rect width="50" height="10" x="0" y="0" rx="10" ry="10" fill="#fff" style="stroke-width:1; stroke:#666"/>
+               <rect width="37" height="10" x="0" y="0" rx="10" ry="10" fill="#fcb701" />
+</svg> 
+            65%</td>
+        </tr>
+                   <tr scope="row">
+          <td>Glasgow University Building</td>
+          <td>1 April</td>
+          <td>New lecture hall</td>
+          <td>Glasgow University</td>
+          <td>Bobby King</td>
+                      <td><svg width="50" height="10" xmlns="http://www.w3.org/2000/svg">
+               <rect width="50" height="10" x="0" y="0" rx="10" ry="10" fill="#fff" style="stroke-width:1; stroke:#666"/>
+               <rect width="37" height="10" x="0" y="0" rx="10" ry="10" fill="#fcb701" />
+</svg> 
+            65%</td>
+        </tr>
+                   <tr scope="row">
+          <td>Glasgow University Building</td>
+          <td>1 April</td>
+          <td>New lecture hall</td>
+          <td>Glasgow University</td>
+          <td>Bobby King</td>
+                      <td><svg width="50" height="10" xmlns="http://www.w3.org/2000/svg">
+               <rect width="50" height="10" x="0" y="0" rx="10" ry="10" fill="#fff" style="stroke-width:1; stroke:#666"/>
+               <rect width="37" height="10" x="0" y="0" rx="10" ry="10" fill="#fcb701" />
+</svg> 
+            65%</td>
+        </tr>
+                   <tr scope="row">
+          <td>Glasgow University Building</td>
+          <td>1 April</td>
+          <td>New lecture hall</td>
+          <td>Glasgow University</td>
+          <td>Bobby King</td>
+                     <td><svg width="50" height="10" xmlns="http://www.w3.org/2000/svg">
+               <rect width="50" height="10" x="0" y="0" rx="10" ry="10" fill="#fff" style="stroke-width:1; stroke:#666"/>
+               <rect width="37" height="10" x="0" y="0" rx="10" ry="10" fill="#fcb701" />
+</svg> 
+            65%</td>
+        </tr>
+                   <tr scope="row">
+          <td>Glasgow University Building</td>
+          <td>1 April</td>
+          <td>New lecture hall</td>
+          <td>Glasgow University</td>
+          <td>Bobby King</td>
+                      <td><svg width="50" height="10" xmlns="http://www.w3.org/2000/svg">
+               <rect width="50" height="10" x="0" y="0" rx="10" ry="10" fill="#fff" style="stroke-width:1; stroke:#666"/>
+               <rect width="37" height="10" x="0" y="0" rx="10" ry="10" fill="#fcb701" />
+</svg> 
+            65%</td>
+        </tr>
+                   <tr scope="row">
+          <td>Glasgow University Building</td>
+          <td>1 April</td>
+          <td>New lecture hall</td>
+          <td>Glasgow University</td>
+          <td>Bobby King</td>
+                     <td><svg width="50" height="10" xmlns="http://www.w3.org/2000/svg">
+               <rect width="50" height="10" x="0" y="0" rx="10" ry="10" fill="#fff" style="stroke-width:1; stroke:#666"/>
+               <rect width="37" height="10" x="0" y="0" rx="10" ry="10" fill="#fcb701" />
+</svg> 
+            65%</td>
+        </tr>
+           
+      </table>
+        </section>
+      <!--       
+
+      End of right column 
+
+      -->
+
+      <!--
+
+      End of Main section
+
+      -->
+    </main>
+
+    <!--     
+
+    Slide-up panels 
+
+    -->
+
+    <!--     <div id="payPanel" class="slidingpage">pay</div> -->
+    <!--     <div id="trackPanel" class="slidingpage">track</div>
+    <div id="alertsPanel" class="slidingpage">alerts</div> -->
+
+   <footer id="footer" role="contentinfo">
+     © 2025 Optimum Business Growth
+    </footer>
+  </body>
+</html>

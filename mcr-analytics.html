@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<!-- the main language of the page declared -->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+
+    <!-- a viewport declaration which does not disable zooming -->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+
+    <link rel="stylesheet" href="https://bobbyking.glitch.me/mcr.css" />
+
+    <!-- Add icon library -->
+    <script
+      src="https://kit.fontawesome.com/69d337d708.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--     Add a P5.js sketch  -->
+    <!-- keep the line below for OpenProcessing compatibility -->
+    <script src="https://openprocessing.org/openprocessing_sketch.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.10.0/lib/p5.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.10.0/lib/addons/p5.sound.min.js"></script>
+
+    <!-- a descriptive label for the page -->
+    <title>Analytics | Master Customer Record</title>
+  </head>
+
+  <body>
+    <!-- a handy skip link for keyboard users -->
+    <div id="skiptocontent">
+      <a href="#main">skip to main content</a>
+    </div>
+
+    <!--     
+
+Header 
+
+-->
+
+    <!-- logo / page navigation etc. goes here -->
+    <header role="banner">
+      <!-- Use any element to open the sidenav -->
+      <!--      <img src="https://cdn.glitch.global/96fa22db-2a31-47fd-af60-76cd25d18ae6/Moolabank%20logo.svg?v=1727205720722" alt="Moolabank logo">  -->
+      <h1>Master Customer Record</h1>
+      <p>
+        <i class="fa-solid fa-user" style="margin-right: 1em"></i>Welcome back,
+        Pavinder
+      </p>
+    </header>
+
+    <div id="pageTitle">
+      <h2>
+        Home&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <u>Search</u> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   <u>User admin</u> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   <u>
+        
+        Datasets</u>
+        <!--         <span id="account-no">My Dashboard</span> -->
+      </h2>
+    </div>
+
+    <!--
+
+    Start of Main section
+
+    -->
+
+    <main id="main" role="main">
+      <!-- this page’s unique content -->
+
+
+     
+        <h1>Insights</h1>
+      
+      <button class="primary">
+        Explore data
+      </button>
+
+        <!--         icons - 
+        <i class="fa-solid fa-circle-chevron-up"> 
+ <i class="fa-solid fa-briefcase"></i>
+<i class="fa-solid fa-check"></i>
+-->
+
+        <!--         
+
+Callouts
+
+-->
+
+        <!--         Layout cards -->
+      <style>
+        card{
+          border:2px solid #e1e1e1;
+          padding:1em;
+          border-radius:5px
+        }
+      </style>
+        <div class="cards">
+          <card>
+            <h3>Companies</h3>
+            <p class="callout-text">964,000</p>
+          </card>
+          <card>
+            <h3>Records</h3>
+            <p class="callout-text">1.2 million</p>
+          </card>
+          <card>
+            <h3>Funding awarded</h3>
+            <p class="callout-text">£39.8 million</p>
+          </card>
+        </div>
+
+        <!--         
+
+Bids by stage bars 
+
+-->
+        <style>
+          .two-card-column {
+            display: grid;
+            grid-template-columns: 50% 50%;
+          }
+          .column-block h3 {
+            font-size: 1.3em;
+          }
+          .column-block-text {
+            font-size: 2em;
+            margin: 0;
+          }
+          .column-card{
+            display:block
+          }
+        </style>
+        <h2>Sectors</h2>
+        <section class="two-card-column">
+          <column-card>
+            <style>
+              .dynamic-cell-alt {
+                background-color: #fabab1;
+                padding: 0.5em;
+              }
+              .bids-table {
+                border-style: none;
+              }
+              .bids-table tr {
+                border-style: none;
+                background-color: none;
+              }
+            </style>
+            <table class="bids-table">
+              <tr class="bids-table__row">
+                <td class="bids-table__cell">Advanced manufacturing</td>
+                <td class="bids-table__cell">
+                  <span class="dynamic-cell-alt" style="padding-right: 8vw"
+                    >21,351</span
+                  >
+                </td>
+              </tr>
+              <tr class="bids-table__row">
+                <td class="bids-table__cell">Clean energy industries</td>
+                <td class="bids-table__cell">
+                  <span class="dynamic-cell-alt" style="padding-right: 20vw"
+                    >43,544</span
+                  >
+                </td>
+              </tr>
+              <tr class="bids-table__row">
+                <td class="bids-table__cell">Creative industries</td>
+                <td class="bids-table__cell">
+                  <span class="dynamic-cell-alt" style="padding-right: 4vw"
+                    >9,943</span
+                  >
+                </td>
+              </tr>
+              <tr class="bids-table__row">
+                <td class="bids-table__cell">Defence</td>
+                <td class="bids-table__cell">
+                  <span class="dynamic-cell-alt" style="padding-right: 16vw"
+                    >41,455</span
+                  >
+                </td>
+              </tr>
+              <tr class="bids-table__row">
+                <td class="bids-table__cell">Digital and technologies</td>
+                <td class="bids-table__cell">
+                  <span class="dynamic-cell-alt" style="padding-right: 21vw"
+                    >44,415</span
+                  >
+                </td>
+              </tr>
+            </table>
+            <a href="#">View all sectors</a>
+          </column-card>
+          <column-card>
+            <style>
+              .card-list {
+                font-size: 1.2em;
+                list-style: none;
+                
+              }
+              .card-list li{
+                line-height:2.5em
+              }
+              
+              .list-call-out {
+                background: #fabab1;
+
+                border-radius: 30%;
+                padding: 0.3em 0.6em;
+                margin-right: 1em;
+              }
+            </style>
+
+            <ul class="card-list">
+              <li><span class="list-call-out">8</span>Segments</li>
+              <li><span class="list-call-out">16</span>Clusters</li>
+              <li><span class="list-call-out">32</span>Locations</li>
+              <li><span class="list-call-out">14</span>Datasets</li>
+            </ul>
+          </column-card>
+        </section>
+        <section class="two-card-column">
+          <column-card>
+      <h3>
+        Total daily searches
+      </h3>
+      <p>
+        150
+      </p>
+      <style>
+        .graph-line {
+          stroke: #acbcd5;
+          stroke-width: 5;
+        }
+        .graph-bar {
+          fill: #acbcd5;
+        }
+        .bar-chart{
+          height:300px;
+          width:600px;
+          margin:0
+        }
+      </style>
+      <svg width="700" height="240" xmlns="http://www.w3.org/2000/svg" class="bar-chart" viewBox="0 0 600 250">
+        <line x1="0" y1="0" x2="0" y2="250" class="graph-line" />
+        <line x1="0" y1="250" x2="550" y2="245" class="graph-line" />
+        <rect
+          width="20"
+          height="75"
+          x="10"
+          y="175"
+          rx="5"
+          ry="5"
+          class="graph-bar"
+        />
+        <rect
+          width="20"
+          height="110"
+          x="40"
+          y="140"
+          rx="5"
+          ry="5"
+          class="graph-bar"
+        />
+        <rect
+          width="20"
+          height="120"
+          x="70"
+          y="130"
+          rx="5"
+          ry="5"
+          class="graph-bar"
+        />
+        <rect
+          width="20"
+          height="125"
+          x="100"
+          y="125"
+          rx="5"
+          ry="5"
+          class="graph-bar"
+        />
+        <rect
+          width="20"
+          height="130"
+          x="130"
+          y="120"
+          rx="5"
+          ry="5"
+          class="graph-bar"
+        />
+        <rect
+          width="20"
+          height="135"
+          x="160"
+          y="115"
+          rx="5"
+          ry="5"
+          class="graph-bar"
+        />
+        <rect
+          width="20"
+          height="140"
+          x="190"
+          y="110"
+          rx="5"
+          ry="5"
+          class="graph-bar"
+        />
+        <rect
+          width="20"
+          height="160"
+          x="220"
+          y="90"
+          rx="5"
+          ry="5"
+          class="graph-bar"
+        />
+        <rect
+          width="20"
+          height="170"
+          x="250"
+          y="80"
+          rx="5"
+          ry="5"
+          class="graph-bar"
+        />
+        <rect
+          width="20"
+          height="180"
+          x="280"
+          y="70"
+          rx="5"
+          ry="5"
+          class="graph-bar"
+        />
+                <rect
+          width="20"
+          height="195"
+          x="310"
+          y="55"
+          rx="5"
+          ry="5"
+          class="graph-bar"
+        />
+                <rect
+          width="20"
+          height="205"
+          x="340"
+          y="45"
+          rx="5"
+          ry="5"
+          class="graph-bar"
+        />
+                <rect
+          width="20"
+          height="215"
+          x="370"
+          y="35"
+          rx="5"
+          ry="5"
+          class="graph-bar"
+        />
+                <rect
+          width="20"
+          height="220"
+          x="400"
+          y="25"
+          rx="5"
+          ry="5"
+          class="graph-bar"
+        />
+                <rect
+          width="20"
+          height="230"
+          x="430"
+          y="15"
+          rx="5"
+          ry="5"
+          class="graph-bar"
+        />
+                <rect
+          width="20"
+          height="235"
+          x="460"
+          y="10"
+          rx="5"
+          ry="5"
+          class="graph-bar"
+        />
+                        <rect
+          width="20"
+          height="245"
+          x="490"
+          y="0"
+          rx="5"
+          ry="5"
+          class="graph-bar"
+        />
+                                <rect
+          width="20"
+          height="245"
+          x="520"
+          y="0"
+          rx="5"
+          ry="5"
+          class="graph-bar"
+        />
+       
+      </svg>
+  <p style="margin-top:0">
+    1 April
+            <span style="margin-left:25%">
+    16 April
+      </span>
+      </p>
+          </column-card>
+          <column-card>
+          <h3>
+            Top searches
+            </h3>
+             <table class="bids-table">
+              <tr class="bids-table__row">
+                <td class="bids-table__cell">AAAA Finance</td>
+                <td class="bids-table__cell">
+                  <span class="dynamic-cell-alt" style="padding-right: 12vw"
+                    >12</span
+                  >
+                </td>
+              </tr>
+              <tr class="bids-table__row">
+                <td class="bids-table__cell">Dundee HealthTech</td>
+                <td class="bids-table__cell">
+                  <span class="dynamic-cell-alt" style="padding-right: 8vw"
+                    >8</span
+                  >
+                </td>
+              </tr>
+                             <tr class="bids-table__row">
+                <td class="bids-table__cell">Offshore Power</td>
+                <td class="bids-table__cell">
+                  <span class="dynamic-cell-alt" style="padding-right: 4vw"
+                    >4</span
+                  >
+                </td>
+              </tr>
+                                           <tr class="bids-table__row">
+                <td class="bids-table__cell">GreenTech</td>
+                <td class="bids-table__cell">
+                  <span class="dynamic-cell-alt" style="padding-right: 3vw"
+                    >3</span
+                  >
+                </td>
+              </tr>
+                                                          <tr class="bids-table__row">
+                <td class="bids-table__cell">BidSearch</td>
+                <td class="bids-table__cell">
+                  <span class="dynamic-cell-alt" style="padding-right: 2vw"
+                    >3</span
+                  >
+                </td>
+              </tr>
+            </table>
+            <a href="#">View all searches</a>
+          </column-card>
+                    </section>
+
+      </section>
+
+    
+                
+
+        <!--           
+
+Bids table 
+
+-->
+
+        <table class="companies-table">
+          <caption style="padding-bottom:1em">
+            <h3>
+              Companies
+            </h3>
+            <a href="#" >Search for a company</a>
+          </caption>
+          <tr>
+            <th scope="col"><i class="fa-solid fa-chevron-down"></i>Company</th>
+            <th scope="col">Last contact</th>
+            <th scope="col">Description</th>
+            <th scope="col">Segments</th>
+            <th scope="col">Location</th>
+            <th scope="col">Open</th>
+          </tr>
+          <tr scope="row">
+            <td>AAA Finance</td>
+            <td>1 April</td>
+            <td>Fintech start-up </td>
+            <td>digital and technologies</td>
+            <td>Aberdeen City</td>
+            <td style="text-align: center">
+              <i
+                class="fa-solid fa-circle-chevron-right"
+                style="color: #666"
+              ></i>
+            </td>
+          </tr>
+          <tr scope="row">
+            <td>AAA Finance</td>
+            <td>1 April</td>
+            <td>Fintech start-up </td>
+            <td>digital and technologies</td>
+            <td>Aberdeen City</td>
+            <td style="text-align: center">
+              <i
+                class="fa-solid fa-circle-chevron-right"
+                style="color: #666"
+              ></i>
+            </td>
+          </tr>
+          <tr scope="row">
+            <td>AAA Finance</td>
+            <td>1 April</td>
+            <td>Fintech start-up </td>
+            <td>digital and technologies</td>
+            <td>Aberdeen City</td>
+            <td style="text-align: center">
+              <i
+                class="fa-solid fa-circle-chevron-right"
+                style="color: #666"
+              ></i>
+            </td>
+          </tr>
+          <tr scope="row">
+            <td>AAA Finance</td>
+            <td>1 April</td>
+            <td>Fintech start-up </td>
+            <td>digital and technologies</td>
+            <td>Aberdeen City</td>
+            <td style="text-align: center">
+              <i
+                class="fa-solid fa-circle-chevron-right"
+                style="color: #666"
+              ></i>
+            </td>
+          </tr>
+          <tr scope="row">
+            <td>AAA Finance</td>
+            <td>1 April</td>
+            <td>Fintech start-up </td>
+            <td>digital and technologies</td>
+            <td>Aberdeen City</td>
+            <td style="text-align: center">
+              <i
+                class="fa-solid fa-circle-chevron-right"
+                style="color: #666"
+              ></i>
+            </td>
+          </tr>
+          <tr scope="row">
+            <td>AAA Finance</td>
+            <td>1 April</td>
+            <td>Fintech start-up </td>
+            <td>digital and technologies</td>
+            <td>Aberdeen City</td>
+            <td style="text-align: center">
+              <i
+                class="fa-solid fa-circle-chevron-right"
+                style="color: #666"
+              ></i>
+            </td>
+          </tr>
+          <tr scope="row">
+            <td>AAA Finance</td>
+            <td>1 April</td>
+            <td>Fintech start-up </td>
+            <td>digital and technologies</td>
+            <td>Aberdeen City</td>
+            <td style="text-align: center">
+              <i
+                class="fa-solid fa-circle-chevron-right"
+                style="color: #666"
+              ></i>
+            </td>
+          </tr>
+          <tr scope="row">
+            <td>AAA Finance</td>
+            <td>1 April</td>
+            <td>Fintech start-up </td>
+            <td>digital and technologies</td>
+            <td>Aberdeen City</td>
+            <td style="text-align: center">
+              <i
+                class="fa-solid fa-circle-chevron-right"
+                style="color: #666"
+              ></i>
+            </td>
+          </tr>
+          <tr scope="row">
+            <td>AAA Finance</td>
+            <td>1 April</td>
+            <td>Fintech start-up </td>
+            <td>digital and technologies</td>
+            <td>Aberdeen City</td>
+            <td style="text-align: center">
+              <i
+                class="fa-solid fa-circle-chevron-right"
+                style="color: #666"
+              ></i>
+            </td>
+          </tr>
+          <tr scope="row">
+            <td>AAA Finance</td>
+            <td>1 April</td>
+            <td>Fintech start-up </td>
+            <td>digital and technologies</td>
+            <td>Aberdeen City</td>
+            <td style="text-align: center">
+              <i
+                class="fa-solid fa-circle-chevron-right"
+                style="color: #666"
+              ></i>
+            </td>
+          </tr>
+        </table>
+
+
+      <!--
+
+      End of Main section
+
+      -->
+    </main>
+
+    <!--     
+
+    Slide-up panels 
+
+    -->
+
+    <!--     <div id="payPanel" class="slidingpage">pay</div> -->
+    <!--     <div id="trackPanel" class="slidingpage">track</div>
+    <div id="alertsPanel" class="slidingpage">alerts</div> -->
+
+    <footer id="footer" role="contentinfo">
+      Powered by DeepMinder | © 2025 DeepMiner
+    </footer>
+  </body>
+</html>

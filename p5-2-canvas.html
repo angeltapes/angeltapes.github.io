@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<!-- the main language of the page declared -->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+
+    <!-- a viewport declaration which does not disable zooming -->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+
+    <!-- a non-blocking stylesheet -->
+    <link
+      rel="stylesheet"
+      href="style.css"
+      media="none"
+      onload="if(media!='all')media='all'"
+    />
+    <noscript><link rel="stylesheet" href="style.css" /></noscript>
+
+    <!-- Add icon library -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <!-- a descriptive label for the page -->
+    <title>Shoestring UI | Home</title>
+
+    <!-- keep the line below for OpenProcessing compatibility -->
+    <script src="https://openprocessing.org/openprocessing_sketch.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.10.0/lib/p5.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.10.0/lib/addons/p5.sound.min.js"></script>
+<!--     <script src="mySketch.js"></script> -->
+  </head>
+
+  <body>
+    <!-- a handy skip link for keyboard users -->
+    <div id="skiptocontent">
+      <a href="#main">skip to main content</a>
+    </div>
+
+    <!-- logo / page navigation etc. goes here -->
+    <header role="banner">
+      <!-- Use any element to open the sidenav -->
+      <p>Shoestring UI</p>
+    </header>
+        <style>
+      #p5-sketch-1{display:block}
+    </style>
+    <div id="p5-sketch-1"></div>
+
+
+<!--       Sketch 1 -->
+    <script>
+      function setup() {
+        let canvas = createCanvas(100,100);
+        canvas.parent("p5-sketch-1");
+        background(255,200,200)
+      }
+    </script>
+    <style>
+      #p5-sketch-2{display:block}
+    </style>
+    <div id="p5-sketch-2"></div>
+    <!--       Sketch 2 -->
+    <script>
+      function setup() {
+        let canvas2 = createCanvas(100,100);
+        canvas2.parent("p5-sketch-2");
+        background(150,255,255)
+      }
+    </script>
+    
+    
+
+  </body>
+
+
+    </main>
+    <footer id="footer" role="contentinfo">&copy; Madmarch 2024</footer>
+  </body>
+</html>

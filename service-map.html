@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<!-- the main language of the page declared -->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+
+    <!-- a viewport declaration which does not disable zooming -->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Add icon library -->
+    <script
+      src="https://kit.fontawesome.com/69d337d708.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- a descriptive label for the page -->
+    <title>Service Design | Home</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/nunjucks/3.2.4/nunjucks.js"></script>
+  </head>
+
+  <body>
+    <!-- a handy skip link for keyboard users -->
+    <div id="skiptocontent">
+      <a href="#main">skip to main content</a>
+    </div>
+
+    <!-- logo / page navigation etc. goes here -->
+    <header role="banner">
+      <!-- Use any element to open the sidenav -->
+      <p>Design Patterns for Social Housing</p>
+    </header>
+
+    <h1 id="pageTitle">Service design maps</h1>
+
+    <!--
+
+    Start of Main section
+
+    -->
+
+    <style>
+      /*------------------------------------*\
+    Phones, tablets - devices with a screen width of under 767px
+\*------------------------------------*/
+
+      @media only screen and (max-width: 767px) {
+        .grid-container {
+          display: grid;
+          grid-template-columns: auto;
+          background-color: white;
+          padding: 10px;
+        }
+
+        .grid-item:nth-child(even) {
+          margin: 0;
+        }
+
+        .grid-item:nth-child(odd) {
+          margin-top: 2em;
+        }
+        
+      }
+
+      /*------------------------------------*\
+    Laptops, desktops - devices with a screen width of under 767px
+\*------------------------------------*/
+      @media only screen and (min-width: 768px) {
+        .grid-container {
+          display: grid;
+          grid-template-columns: auto auto;
+          background-color: white;
+          padding: 1em;
+        }
+        .grid-item {
+          margin: 1em;
+        }
+      }
+
+/*------------------------------------*\
+   All styles
+\*------------------------------------*/
+
+      .grid-item {
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 0 !important;
+        text-align: left;
+        vertical-align: top;
+      }
+
+      .grid-item:nth-child(odd) {
+        border: 1px solid #666;
+      }
+
+      .grid-item:nth-child(even) p {
+        padding: 1em;
+      }
+      .grid-item i {
+        margin-right: 0.5em;
+        display: inline-block
+      }
+
+      .grid-item h3 {
+        color: white;
+        background-color: #0b3e77;
+        padding: 1em;
+        margin: 0;
+        line-height: 1.5em
+      }
+
+      .grid-item p {
+        padding: 0 1em;
+      }
+
+      .purple-card {
+        background: #8789c0;
+      }
+
+      .grey-card {
+        background: #e2e4e2;
+      }
+
+      .green-card {
+        background: #bfd3c1;
+      }
+
+      .orange-card {
+        background: #eec9ca;
+      }
+
+      .blue-card {
+        background-color: #e0e0f0;
+      }
+    </style>
+    <main id="service-main" role="main">
+      <!-- this page’s unique content -->
+      <h2>Example</h2>
+      <div class="grid-container">
+        <div class="grid-item">
+          <h3>
+            <i class="fa-solid fa-car"></i>
+            1. A numbered service stage with a
+            representative icon
+          </h3>
+          <p>
+            Describe the stage in detail. Capture any pain points and
+            improvement ideas. "Include verbatim quotes from research."
+          </p>
+          <p>
+            Optional: include an emoji for how the person is feeling at this
+            stage.
+          </p>
+          <p>
+            <i class="fa-solid fa-face-smile grey-icon" alt="smiling face"></i>
+          </p>
+        </div>
+        <div class="grid-item">
+          <p class="grey-card">
+            <i class="fa-solid fa-scale-balanced"></i>Backstage - a policy or
+            legal factor (grey)
+          </p>
+          <p class="green-card">
+            <i class="fa-solid fa-database"></i>Backstage - a technical factor,
+            such as a database (green)
+          </p>
+          <p class="blue-card">
+            <i class="fa-solid fa-calendar-days"></i>Time-based process (blue)
+          </p>
+          <p class="orange-card">
+            <i class="fa-solid fa-circle-exclamation"></i>Pain point or blocker
+            (pink)
+          </p>
+        </div>
+      </div>
+      <h2>A social housing complaints process</h2>
+      <div class="grid-container">
+        <!--   Row 1 -->
+        <div class="grid-item">
+          <h3 class="service-header">
+            <i class="fa-solid fa-face-meh"></i>1. Something goes wrong and the
+            tenant wants to tell the landlord.
+          </h3>
+          <p>
+            Pain points: "I've never met my landlord, I don't know how to get
+            hold of them."
+          </p>
+        </div>
+        <div class="grid-item">
+          <p class="grey-card">
+            <i class="fa-solid fa-scale-balanced"></i>Complaints are regulated
+            by the Housing Ombudsman
+          </p>
+          <p class="green-card">
+            <i class="fa-solid fa-phone-slash"></i>Housing associations offer
+            different contact methods - in person, phone and online
+          </p>
+        </div>
+
+        <!--   Row 2 -->
+        <div class="grid-item">
+          <h3 class="service-header">
+            <i class="fa-solid fa-magnifying-glass"></i>2. Search for contact
+            information
+          </h3>
+          <p>
+            The tenant searches for contact details for the landlord and
+            complaints information
+          </p>
+          <p>Channels can include:</p>
+          <ul>
+            <li>in person</li>
+            <li>online</li>
+            <li>by phone</li>
+            <li>through chat/messenger</li>
+            <li>by letter</li>
+          </ul>
+        </div>
+        <div class="grid-item">
+          <p class="orange-card">
+            <i class="fa-solid fa-circle-exclamation"></i>The online experience
+            might be poor or hard to navigate
+          </p>
+        </div>
+
+        <!--   Row 3 -->
+        <div class="grid-item">
+          <h3 class="service-header">
+            <i class="fa-solid fa-phone"></i>3. Make a complaint
+          </h3>
+          <p>
+            The tenant makes the complaint. If they don't speak to someone
+            directly they need to wait for a response.
+          </p>
+        </div>
+        <div class="grid-item">
+          <p class="blue-card">
+            <i class="fa-solid fa-calendar-days"></i>The landlord has up to five
+            working days to reply to the complaint.
+          </p>
+        </div>
+
+        <!--   Row 4 -->
+        <div class="grid-item">
+          <h3 class="service-header">
+            <i class="fa-solid fa-calendar-days"></i>4. Response received
+          </h3>
+          <p>
+            The tenant received a response from their landlord clarifying their
+            understanding of the complaint and what will happen next.
+          </p>
+        </div>
+        <div class="grid-item"></div>
+
+        <!--   Row 5 -->
+        <div class="grid-item">
+          <h3 class="service-header">
+            <i class="fa-regular fa-message"></i>5. Speak directly to an
+            investigating staff member
+          </h3>
+          <p>
+            The investigating staff member talks directly to the tenant to
+            discover better what's gone wrong.
+          </p>
+        </div>
+        <div class="grid-item">
+          <p class="blue-card">
+            <i class="fa-solid fa-calendar-days"></i>The landlord has up to ten
+            working days from acknowledging the complaint to investigate.
+          </p>
+          <p class="orange-card">
+            <i class="fa-solid fa-circle-exclamation"></i>Landlords need to be
+            clear about how and when a tenant wants to be contacted. Consider
+            texting them to confirm.
+          </p>
+        </div>
+
+        <!--   Row 6 -->
+        <div class="grid-item">
+          <h3 class="service-header">
+            <i class="fa-solid fa-file"></i>6. The landlord gives the tenant a
+            written stage 1 complaint outcome
+          </h3>
+          <p>The Housing Officer defines the content.</p>
+          <p>
+            The landlord speaks to the tenant to help improve the complaints
+            process and improve any services that led to the complaint
+          </p>
+        </div>
+        <div class="grid-item"></div>
+
+        <!--   Row 7 -->
+        <div class="grid-item">
+          <h3 class="service-header">
+            <i class="fa-solid fa-face-frown"></i>7. The tenant escalates the
+            complaint to stage 2
+          </h3>
+          <p>
+            If the tenant's still unhappy they can escalate the complaint
+            further.
+          </p>
+          <p>
+            A different member of staff takes on the complaint and writes to the
+            tenant.
+          </p>
+        </div>
+        <div class="grid-item">
+          <p class="blue-card">
+            <i class="fa-solid fa-calendar-days"></i>The landlord has up to five
+            working days to acknowledge the escalation.
+          </p>
+        </div>
+
+        <!--   Row 8 -->
+        <div class="grid-item">
+          <h3 class="service-header">
+            <i class="fa-solid fa-comments"></i>8. The investigating housing
+            officer speaks to the tenant.
+          </h3>
+          <p>They then investigate the complaint.</p>
+        </div>
+        <div class="grid-item">
+          <p class="blue-card">
+            <i class="fa-solid fa-calendar-days"></i>The landlord has up to 20
+            working days from acknowledging the escalation to resolve the
+            complaint.
+          </p>
+        </div>
+
+        <!--   Row 9 -->
+        <div class="grid-item">
+          <h3 class="service-header">
+            <i class="fa-solid fa-file"></i>9. The landlord sends the tenant the
+            stage 2 complaint outcome.
+          </h3>
+          <p>
+            They can use several channels to do this. They use content defined
+            by the Housing Officer.
+          </p>
+        </div>
+        <div class="grid-item"></div>
+
+        <!--   Row 10 -->
+        <div class="grid-item">
+          <h3 class="service-header">
+            <i class="fa-solid fa-circle-check"></i>10. The landlord resolves
+            the complaint.
+          </h3>
+          <p>
+            They speak to the tenant to resolve any issues which led to the
+            complaint and improve the complaints process.
+          </p>
+        </div>
+        <div class="grid-item"></div>
+      </div>
+
+      <!--
+
+      End of Main section
+
+      -->
+    </main>
+
+       <footer id="footer" role="contentinfo">
+      <h2>About the service cards</h2>
+      <p>
+        Designers often create these cards on boards like Miro or Mural. They might create a final version as a PDF or image file. 
+      </p>
+       <p>
+         The best way to share any kind of information on the web is on a web page. If you access it on a mobile or change the text size you'll still be able to read the information. 
+       </p>
+         <p>
+           This page shows a format for sharing a service map as a series of cards. 
+         </p>
+      <p>&copy; Madmarch 2024</p>
+    </footer>
+
+    <!-- a non-blocking javascript resource -->
+    <script src="script.js"></script>
+  </body>
+</html>

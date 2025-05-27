@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<!-- the main language of the page declared -->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+
+    <!-- a viewport declaration which does not disable zooming -->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+
+    <!-- a non-blocking stylesheet -->
+    <link
+      rel="stylesheet"
+      href="style.css"
+      media="none"
+      onload="if(media!='all')media='all'"
+    />
+    <noscript><link rel="stylesheet" href="style.css" /></noscript>
+
+    <!-- Add icon library -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <!-- a descriptive label for the page -->
+    <title>Shoestring UI | Home</title>
+
+    <!-- keep the line below for OpenProcessing compatibility -->
+    <script src="https://openprocessing.org/openprocessing_sketch.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.10.0/lib/p5.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.10.0/lib/addons/p5.sound.min.js"></script>
+    <!--     <script src="mySketch.js"></script> -->
+  </head>
+
+  <body>
+    <!-- a handy skip link for keyboard users -->
+    <div id="skiptocontent">
+      <a href="#main">skip to main content</a>
+    </div>
+
+    <!-- logo / page navigation etc. goes here -->
+    <header role="banner">
+      <!-- Use any element to open the sidenav -->
+      <p>Shoestring UI</p>
+    </header>
+
+    <!--     
+
+style 
+
+-->
+    <style>
+      canvas {
+        display: block;
+      }
+      #p5-sketch {
+        width: 100px;
+        height: 100px;
+        padding: 1em;
+      }
+      .myClass {
+        color: pink;
+      }
+    </style>
+
+<!--     
+
+Content 
+
+-->
+    
+    <h1 id="pageTitle">Style guide</h1>
+
+    <main>
+           <label>Enter a value for testName</label>
+      <input name="testName" id="testId"></input>
+      <button onclick="testy()">
+        Enter
+      </button>
+  
+
+      
+      
+      <div id="p5-sketch"></div>
+
+
+      <!--       
+
+P5 script 
+
+-->
+      <script>
+        let thisPath;
+        
+        function testy(){
+          // alert("working")
+          window.location.replace("p5-get.html?test=true")
+        }
+        function setup() {
+          
+          thisPath = httpGet("https://bobbyking.glitch.me/p5-get.html","?test");
+          
+          
+          // create canvas inside div
+          // console.log(width);
+          // console.log(height);
+
+          let canvas = createCanvas(400, 400);
+          canvas.parent("p5-sketch");
+          let button = createButton("click me");
+          button.position(100, 400);
+          button.class("myClass");
+        }
+        // adjust canvas size on resize
+        function windowResized() {
+          // adjust width and height to parent div
+          width = parentDiv.offsetWidth;
+          height = parentDiv.offsetHeight;
+          resizeCanvas(width, height);
+        }
+
+        function draw() {
+         text(thisPath,20,20);
+          background(255, 5);
+          circle(mouseX, mouseY, 50);
+        }
+      </script>
+    </main>
+  </body>
+
+  <footer id="footer" role="contentinfo">&copy; Madmarch 2024</footer>
+</html>
